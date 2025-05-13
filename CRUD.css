@@ -1,0 +1,104 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    background: url('img/fondo2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+.crud-page {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+}
+
+.panel {
+    width: 1100px;
+    border-left: 5px solid #0051ff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 0 20px rgba(0, 195, 255, 0.3);
+}
+
+h2 {
+    color: #fff;
+    text-shadow: 0 0 10px #ff00cc;
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+.input-group {
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    border: 1px solid #ff008c;
+    background-color: #bfa1ca;
+    box-shadow: 0 0 10px #00ffff20;
+    transition: box-shadow 0.3s ease;
+}
+
+.input-group input, .input-group button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #b10b4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 15px #ff0066, 0 0 25px #ff0066;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #e6005c;
+    box-shadow: 0 0 20px #ff3399, 0 0 30px #ff3399;
+}
+
+.card {
+    background-color: #bfa1ca;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    font-size: 0.8em;
+    color:#555555;
+}
+
+.actions button {
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+@media (max-width: 768px) {
+    .input-group {
+        grid-template-columns: 1fr;
+    }
+    .container{
+        flex-direction: column;
+    }
+}

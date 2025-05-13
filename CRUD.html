@@ -1,0 +1,84 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katronix Gaming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CRUD.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <img src="img/logo_VJ.png" class="logo">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="juegos.html">Juegos</a></li>
+                    <li><a href="CRUD.html">GameHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="crud-page">
+        <div class="panel">
+            <h2>Nuevo Videojuego</h2>
+            <div class="input-group">
+                <input type="text" id="nombre" placeholder="Nombre del Videojuego">
+                <input type="text" id="categoria" placeholder="Categoria del Videojuego">
+                <button onclick="agregarJuego()">Agregar Videojuego</button>
+            </div>
+            <div id="listaJuegos"></div>
+            <div class="card">
+                <span>Fortnite - Battle Royale - Estado: Jugando</span>
+                <div class="actions">
+                    <button title="Editar">✏️</button>
+                    <button title="Eliminar">🗑️</button>
+                    <button title="Cambiar Estado">🔄</button>
+                </div>
+            </div>
+            <div class="card">
+                <span>Minecraft - Sandbox - Estado: Jugando</span>
+                <div class="actions">
+                    <button title="Editar">✏️</button>
+                    <button title="Eliminar">🗑️</button>
+                    <button title="Cambiar Estado">🔄</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Nuevo Amigo</h2>
+            <div class="input-group">
+                <input type="text" id="amigo" placeholder="Nombre del Jugador">
+                <input type="text" id="videogame" placeholder="Juego en Común">
+                <button onclick="agregarAmigo()">Agregar Amigo</button>
+            </div>
+            <div id="listaAmigos"></div>
+            <div class="card">
+                <span>Karretin - Minecraft - Estado: En línea</span>
+                <div class="actions">
+                    <button title="Editar">✏️</button>
+                    <button title="Eliminar">🗑️</button>
+                    <button title="Cambiar Estado">🔄</button>
+                </div>
+            </div>
+            <div class="card">
+                <span>WitchyMigtht - Fortnite - Estado: En línea</span>
+                <div class="actions">
+                    <button title="Editar">✏️</button>
+                    <button title="Eliminar">🗑️</button>
+                    <button title="Cambiar Estado">🔄</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>@Kathe 2025 - Katronix Gaming</p>
+    </footer>
+
+    <script src="CRUD.js"></script>
+</body>
+</html>

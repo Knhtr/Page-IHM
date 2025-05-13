@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    background: url('img/fondoo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    text-align: right;
+    padding-left: 600px;
+    transform: translateY(100px);
+}
+
+.contenido h1 {
+    font-size: 2.8em;
+    color: #fff;
+    text-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+    max-width: 600px;
+    line-height: 1.2;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #ff00cc;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 15px #ff00cc, 0 0 25px #ff00cc;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e6008e;
+    box-shadow: 0 0 20px #ff3399, 0 0 30px #ff3399;
+}
