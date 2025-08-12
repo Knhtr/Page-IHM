@@ -1,0 +1,170 @@
+:root{
+  --bg: #070816;
+  --panel: rgba(0, 0, 0, 0.45);
+  --line: #00ffff66;
+  --neon: #00ffff;
+  --neon2:#ff00cc;
+  --text:#e7f7ff;
+  --muted:#9ad4ff;
+  --chip:#0b1226;
+  --shadow: 0 0 24px rgba(0,255,255,.18), 0 0 54px rgba(255,0,204,.12);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+
+body{
+  margin:0;
+  font-family:'Orbitron', system-ui, sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 120% -10%, rgba(255,0,204,.18) 0%, transparent 60%),
+    radial-gradient(1000px 700px at -20% 0%, rgba(0,255,255,.12) 0%, transparent 60%),
+    url('img/fondo3.jpg') no-repeat center/cover fixed,
+    var(--bg);
+  padding-top:100px; /* espacio por header fijo */
+}
+
+/* Utilidad */
+.container{max-width:1200px;margin-inline:auto;padding:0 20px}
+
+/* Hero */
+.hero{
+  position:relative;
+  isolation:isolate;
+  padding:56px 20px 24px;
+}
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35)),
+    repeating-linear-gradient(90deg, transparent 0 44px, rgba(255,255,255,.03) 44px 45px);
+  z-index:-1; backdrop-filter: blur(6px);
+}
+.hero__wrap{max-width:1100px;margin:0 auto;text-align:center}
+.hero__title{
+  margin:0 0 12px;
+  font-size: clamp(28px, 4vw, 44px);
+  letter-spacing:.02em;
+  text-shadow:0 0 18px rgba(0,255,255,.4);
+}
+.hero__subtitle{
+  margin:0 auto;
+  max-width:780px;
+  line-height:1.6;
+  font-size: clamp(14px, 2.2vw, 18px);
+  color:var(--muted);
+}
+.hero__subtitle span{color:#fff}
+.hero__subtitle strong{color:#fff}
+
+/* Timeline */
+.timeline{
+  --gap: 38px;
+  position:relative;
+  margin: 24px auto 80px;
+  padding: 0 20px;
+  max-width: 1100px;
+}
+.timeline::before{
+  content:"";
+  position:absolute;
+  top:0; bottom:0; left:50%;
+  width:2px;
+  background: linear-gradient(180deg, var(--neon), var(--neon2));
+  box-shadow: 0 0 10px var(--neon), 0 0 16px var(--neon2);
+  transform: translateX(-50%);
+  opacity:.65;
+}
+
+/* Tarjetas */
+.t-card{
+  position:relative;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:12px;
+  margin-block: var(--gap);
+  padding:18px 18px 16px;
+  background: linear-gradient(180deg, rgba(0,0,0,.58), rgba(0,0,0,.42));
+  border:1px solid #00ffff33;
+  border-radius:16px;
+  box-shadow: var(--shadow);
+  outline: none;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+/* Alternar lados en desktop */
+@media (min-width: 860px){
+  .t-card{
+    width: calc(50% - 40px);
+  }
+  .t-card:nth-child(odd){ margin-right: auto; }
+  .t-card:nth-child(even){ margin-left: auto; }
+  .t-card::after{
+    content:"";
+    position:absolute;
+    top: 28px;
+    width:18px; height:18px;
+    border-radius:50%;
+    background: radial-gradient(circle at 30% 30%, #fff 0 10%, var(--neon) 26%, var(--neon2) 70%);
+    box-shadow: 0 0 10px var(--neon), 0 0 18px var(--neon2);
+    left: calc(100% + 31px);
+  }
+  .t-card:nth-child(even)::after{
+    left: auto; right: calc(100% + 31px);
+  }
+}
+
+/* Contenido */
+.t-meta{display:flex; flex-wrap:wrap; align-items:center; gap:10px}
+.t-badge{
+  display:inline-block;
+  padding:6px 12px;
+  border:1px solid #00ffff55;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  background:linear-gradient(90deg, rgba(0,255,255,.12), rgba(255,0,204,.12));
+  box-shadow: inset 0 0 20px rgba(0,255,255,.18);
+}
+.t-title{
+  margin:0; font-size: clamp(16px, 2.2vw, 22px);
+  text-shadow: 0 0 10px rgba(0,255,255,.18);
+}
+
+.t-content{display:grid; gap:8px; margin-top:4px}
+.t-chip{
+  display:inline-block;
+  width:max-content;
+  padding:6px 10px;
+  border-radius:999px;
+  background: var(--chip);
+  border:1px solid #00ffff33;
+  font-size:11px;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color: var(--muted);
+}
+
+.t-card:hover{
+  transform: translateY(-2px);
+  border-color: #00ffff99;
+  box-shadow: 0 0 20px rgba(0,255,255,.35), 0 0 38px rgba(255,0,204,.18);
+}
+
+/* Accesibilidad: foco visible */
+.t-card:focus-visible{
+  outline: 3px solid #00ffffaa;
+  outline-offset: 4px;
+}
+
+/* Footer */
+.footer{
+  text-align:center;
+  padding:36px 16px 56px;
+  color:var(--muted);
+}
+
+/* Sin JS: visibles por defecto (no hay clase .reveal aquí) */
