@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Katronix Gaming — Historia</title>
 
   <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
 
-  <!-- Estilos existentes del sitio -->
+  <!-- Estilos globales -->
   <link rel="stylesheet" href="header.css">
   <!-- Estilos de esta página -->
   <link rel="stylesheet" href="historia.css">
 </head>
 <body>
-  <!-- Header (usa tu header.css) -->
+  <!-- Header -->
   <header class="header">
     <div class="menu container">
-      <img src="img/logo_VJ.png" class="logo" alt="Katronix Gaming">
+      <img src="img/logo_VJ.png" class="logo" alt="Katronix Gaming"/>
       <nav class="navbar" aria-label="Principal">
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -29,218 +29,232 @@
     </div>
   </header>
 
-  <main id="main" class="main" tabindex="-1">
+  <main id="main" tabindex="-1">
     <!-- Hero -->
     <section class="hero">
       <div class="hero__wrap">
-        <h1 class="hero__title">Evolución de la Ingeniería de Software y la Eficiencia de Procesamiento</h1>
+        <h1 class="hero__title">Evolución de Ingeniería de Software y Eficiencia de Procesamiento</h1>
         <p class="hero__subtitle">
           De <span>batch processing</span> a <span>IA en tiempo real</span>:
-          hitos que cambiaron la <strong>ingeniería de software</strong>,
-          la <strong>eficiencia de procesamiento</strong> y la <strong>HCI</strong>.
+          cómo las mejoras en <strong>CPU</strong>, <strong>memoria</strong> y <strong>E/S</strong>
+          impulsaron nuevos <strong>paradigmas</strong>, <strong>arquitecturas</strong> y una HCI más natural.
         </p>
       </div>
     </section>
 
-    <!-- Respuesta a la pregunta del grupo -->
-    <section class="answer" id="respuesta">
-      <h2>¿Cómo ha evolucionado esta tecnología (nuestro grupo)?</h2>
-
+    <!-- Resumen -->
+    <section class="summary container" aria-label="Resumen">
       <p class="lead">
-        Pasamos de cómputo lento, monousuario y por lotes a plataformas distribuidas,
-        paralelas e inteligentes. Cada salto técnico (CPU, memoria y E/S) impulsó cambios
-        en <strong>paradigmas de programación</strong>, <strong>arquitecturas</strong> y
-        <strong>técnicas de optimización</strong>, logrando interfaces cada vez más
-        <em>naturales y fluidas</em> (HCI, cap. 2).
-      </p>
-
-      <div class="a-grid">
-        <article class="milestone">
-          <h3>1940s–1960s · Batch y hardware limitado</h3>
-          <ul>
-            <li><b>Software:</b> ensamblador/código máquina; optimización manual extrema.</li>
-            <li><b>Eficiencia:</b> planificación por lotes, gestión rígida de memoria; E/S lenta.</li>
-            <li><b>HCI:</b> tarjetas perforadas, latencia de horas.</li>
-          </ul>
-        </article>
-
-        <article class="milestone">
-          <h3>1960s–1970s · Time-Sharing en mainframes</h3>
-          <ul>
-            <li><b>Software:</b> FORTRAN/COBOL; multiprogramación y <i>schedulers</i> (Round-Robin).</li>
-            <li><b>Eficiencia:</b> mejor uso de CPU compartida; memoria virtual.</li>
-            <li><b>HCI:</b> terminales de texto e interacción casi en tiempo real.</li>
-          </ul>
-        </article>
-
-        <article class="milestone">
-          <h3>1980s · PC y primeras GUI</h3>
-          <ul>
-            <li><b>Software:</b> orientación a eventos, toolkits de UI; compiladores más optimizadores.</li>
-            <li><b>Eficiencia:</b> cachés y pipelines; gráficos acelerados básicos.</li>
-            <li><b>HCI:</b> mouse, ventanas e íconos → gran salto en usabilidad.</li>
-          </ul>
-        </article>
-
-        <article class="milestone">
-          <h3>1990s · Red, web y multimedia</h3>
-          <ul>
-            <li><b>Software:</b> cliente-servidor, multithreading, BD a gran escala.</li>
-            <li><b>Eficiencia:</b> SIMD, superscalar; optimización de E/S y códecs.</li>
-            <li><b>HCI:</b> web gráfica e interfaces dinámicas.</li>
-          </ul>
-        </article>
-
-        <article class="milestone">
-          <h3>2000s · Móvil y bajo consumo</h3>
-          <ul>
-            <li><b>Software:</b> apps móviles; <i>async I/O</i>, patrones reactivos.</li>
-            <li><b>Eficiencia:</b> ARM/SoC, políticas de ahorro energético, compresión.</li>
-            <li><b>HCI:</b> pantallas táctiles y diseño responsivo.</li>
-          </ul>
-        </article>
-
-        <article class="milestone">
-          <h3>2010s · Multinúcleo y paralelismo</h3>
-          <ul>
-            <li><b>Software:</b> concurrencia, microservicios, GPGPU; Map-Reduce/streaming.</li>
-            <li><b>Eficiencia:</b> escalado horizontal, cacheo, vectorización.</li>
-            <li><b>HCI:</b> UIs fluidas sobre datos masivos y tiempo real.</li>
-          </ul>
-        </article>
-
-        <article class="milestone">
-          <h3>2020s–hoy · IA, nube híbrida y edge</h3>
-          <ul>
-            <li><b>Software:</b> MLOps, inferencia en tiempo real, cuantización/distilación.</li>
-            <li><b>Eficiencia:</b> colocación híbrida (nube/edge), aceleradores (GPU/TPU/NPU).</li>
-            <li><b>HCI:</b> voz, visión y gestos; experiencias inmersivas (XR).</li>
-          </ul>
-        </article>
-      </div>
-
-      <p class="closing">
-        <b>Conclusión:</b> la disciplina evolucionó al ritmo del hardware: cada mejora en CPU,
-        memoria y E/S habilitó nuevos modelos de programación y arquitecturas más eficientes,
-        logrando sistemas escalables y experiencias de usuario más naturales.
+        Pasamos de cómputo lento y por lotes a plataformas distribuidas, paralelas e inteligentes.
+        Cada salto técnico transformó el software y la experiencia de usuario (HCI, cap. 2).
       </p>
     </section>
 
-    <!-- Timeline -->
-    <section class="timeline" aria-label="Línea de tiempo de la evolución tecnológica">
-      <h2 class="timeline-title">Línea de tiempo — Ingeniería de Software & Eficiencia de Procesamiento</h2>
+    <!-- Chips de periodos -->
+    <nav class="period-nav container" aria-label="Periodos">
+      <a href="#c-1940s" class="chip">1940s–1960s</a>
+      <a href="#c-1960s" class="chip">1960s–1970s</a>
+      <a href="#c-1980s" class="chip">1980s</a>
+      <a href="#c-1990s" class="chip">1990s</a>
+      <a href="#c-2000s" class="chip">2000s</a>
+      <a href="#c-2010s" class="chip">2010s</a>
+      <a href="#c-2020s" class="chip">2020s–hoy</a>
+    </nav>
 
-      <!-- 1940s–1960s -->
-      <article class="t-card" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">1940s–1960s</span>
-          <h3 class="t-title">Válvulas → Transistores · Batch Processing</h3>
-        </div>
-        <div class="t-content">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>Computadoras de válvulas y luego transistores; procesamiento por lotes.</p>
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Programación en código máquina y ensamblador; optimización extrema por limitaciones.</p>
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Interacción indirecta con tarjetas perforadas; tiempos de respuesta de horas.</p>
-        </div>
-      </article>
+    <!-- Carrusel con :target (amplía la tarjeta activa) -->
+    <section class="rail-wrap" aria-label="Línea de tiempo interactiva">
+      <div class="rail-axis" aria-hidden="true"></div>
 
-      <!-- 1960s–1970s -->
-      <article class="t-card" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">1960s–1970s</span>
-          <h3 class="t-title">Mainframes · Time-Sharing</h3>
-        </div>
-        <div class="t-content">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>Mainframes con sistemas de tiempo compartido.</p>
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Lenguajes de alto nivel (FORTRAN, COBOL); gestión eficiente de CPU compartida.</p>
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Terminales de texto; interacción multiusuario más inmediata.</p>
-        </div>
-      </article>
+      <div class="timeline-rail" id="rail" aria-live="polite">
+        <!-- 1940s–1960s -->
+        <article class="card" id="c-1940s" tabindex="0" aria-labelledby="t-1940s">
+          <header class="card-head">
+            <span class="badge">1940s–1960s</span>
+            <h2 class="card-title" id="t-1940s">Batch · Hardware limitado</h2>
+            <a class="btn expand" href="#c-1940s" aria-label="Ampliar 1940s–1960s">Ampliar</a>
+            <a class="btn close" href="#rail" aria-label="Cerrar ampliación">×</a>
+          </header>
 
-      <!-- 1980s -->
-      <article class="t-card" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">1980s</span>
-          <h3 class="t-title">Microcomputadoras · Primeras GUI</h3>
-        </div>
-        <div class="t-content">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>PCs, aceleración gráfica inicial, sistemas de ventanas.</p>
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Paradigma orientado a eventos; optimización para gráficos y nuevos dispositivos de entrada.</p>
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Mouse, íconos y ventanas; salto drástico en usabilidad.</p>
-        </div>
-      </article>
+          <figure class="card-figure img-1940s" role="img"
+                  aria-label="Computadoras de válvulas y transistores; procesamiento por lotes"></figure>
 
-      <!-- 1990s -->
-      <article class="t-card" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">1990s</span>
-          <h3 class="t-title">Redes · Multimedia · Multitarea</h3>
-        </div>
-        <div class="t-content">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>Sistemas conectados, multimedia, Internet pública.</p>
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Multithreading, cliente–servidor; optimización para audio y video.</p>
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Interfaces más ricas y dinámicas; nace la web.</p>
-        </div>
-      </article>
+          <div class="card-body">
+            <div class="pill">Hito tecnológico</div>
+            <p>Computadoras de válvulas → transistores; procesamiento por lotes.</p>
+            <div class="pill">Impacto en Ing. de Software</div>
+            <p>Programación en machine code/ensamblador; optimización manual extrema.</p>
+            <div class="pill">Impacto en HCI</div>
+            <p>Tarjetas perforadas; tiempos de respuesta de horas.</p>
+          </div>
 
-      <!-- 2000s -->
-      <article class="t-card" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">2000s</span>
-          <h3 class="t-title">Móviles · Bajo Consumo</h3>
-        </div>
-        <div class="t-content">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>Smartphones y procesadores low-power.</p>
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Optimización energética; E/S asíncrona; apps nativas y móviles.</p>
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Interfaces táctiles y adaptativas; experiencia móvil centrada en el usuario.</p>
-        </div>
-      </article>
+          <nav class="card-nav" aria-label="Navegación de tarjetas">
+            <a class="nav-btn prev" href="#c-2020s" aria-label="Ir a 2020s–hoy">◀</a>
+            <a class="nav-btn next" href="#c-1960s" aria-label="Ir a 1960s–1970s">▶</a>
+          </nav>
+        </article>
 
-      <!-- 2010s -->
-      <article class="t-card" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">2010s</span>
-          <h3 class="t-title">Multinúcleo · Paralelismo</h3>
-        </div>
-        <div class="t-content">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>CPU multinúcleo y GPGPU; cómputo paralelo generalizado.</p>
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Arquitecturas concurrentes; software escalable y distribuido.</p>
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Mayor fluidez multitarea; aplicaciones intensivas en datos.</p>
-        </div>
-      </article>
+        <!-- 1960s–1970s -->
+        <article class="card" id="c-1960s" tabindex="0" aria-labelledby="t-1960s">
+          <header class="card-head">
+            <span class="badge">1960s–1970s</span>
+            <h2 class="card-title" id="t-1960s">Mainframes · Time-Sharing</h2>
+            <a class="btn expand" href="#c-1960s" aria-label="Ampliar 1960s–1970s">Ampliar</a>
+            <a class="btn close" href="#rail" aria-label="Cerrar ampliación">×</a>
+          </header>
 
-      <!-- 2020s–Actualidad -->
-      <article class="t-card" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">2020s–Actualidad</span>
-          <h3 class="t-title">IA · Edge · XR</h3>
-        </div>
-        <div class="t-content">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>Integración de IA, edge computing y realidad aumentada/mixta.</p>
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Inferencia en tiempo real; optimización híbrida local–nube.</p>
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Interacción por voz, visión y gestos; experiencias inmersivas.</p>
-        </div>
-      </article>
+          <figure class="card-figure img-1960s" role="img"
+                  aria-label="Mainframes con sistemas de tiempo compartido"></figure>
+
+          <div class="card-body">
+            <div class="pill">Hito tecnológico</div>
+            <p>Mainframes con <em>time-sharing</em>.</p>
+            <div class="pill">Impacto en Ing. de Software</div>
+            <p>Lenguajes de alto nivel (FORTRAN, COBOL); multiprogramación y <em>round-robin</em>.</p>
+            <div class="pill">Impacto en HCI</div>
+            <p>Terminales de texto; interacción multiusuario más inmediata.</p>
+          </div>
+
+          <nav class="card-nav">
+            <a class="nav-btn prev" href="#c-1940s" aria-label="Ir a 1940s–1960s">◀</a>
+            <a class="nav-btn next" href="#c-1980s" aria-label="Ir a 1980s">▶</a>
+          </nav>
+        </article>
+
+        <!-- 1980s -->
+        <article class="card" id="c-1980s" tabindex="0" aria-labelledby="t-1980s">
+          <header class="card-head">
+            <span class="badge">1980s</span>
+            <h2 class="card-title" id="t-1980s">PC · Primeras GUI</h2>
+            <a class="btn expand" href="#c-1980s" aria-label="Ampliar 1980s">Ampliar</a>
+            <a class="btn close" href="#rail" aria-label="Cerrar ampliación">×</a>
+          </header>
+
+          <figure class="card-figure img-1980s" role="img"
+                  aria-label="PCs y primeras interfaces gráficas de usuario"></figure>
+
+          <div class="card-body">
+            <div class="pill">Hito tecnológico</div>
+            <p>Microcomputadoras; primeras GUI.</p>
+            <div class="pill">Impacto en Ing. de Software</div>
+            <p>Software orientado a eventos; optimización para gráficos y nuevos dispositivos de entrada.</p>
+            <div class="pill">Impacto en HCI</div>
+            <p>Mouse, iconos y ventanas; gran salto en usabilidad.</p>
+          </div>
+
+          <nav class="card-nav">
+            <a class="nav-btn prev" href="#c-1960s" aria-label="Ir a 1960s–1970s">◀</a>
+            <a class="nav-btn next" href="#c-1990s" aria-label="Ir a 1990s">▶</a>
+          </nav>
+        </article>
+
+        <!-- 1990s -->
+        <article class="card" id="c-1990s" tabindex="0" aria-labelledby="t-1990s">
+          <header class="card-head">
+            <span class="badge">1990s</span>
+            <h2 class="card-title" id="t-1990s">Red · Web · Multimedia</h2>
+            <a class="btn expand" href="#c-1990s" aria-label="Ampliar 1990s">Ampliar</a>
+            <a class="btn close" href="#rail" aria-label="Cerrar ampliación">×</a>
+          </header>
+
+          <figure class="card-figure img-1990s" role="img"
+                  aria-label="Sistemas en red, web pública y multimedia"></figure>
+
+          <div class="card-body">
+            <div class="pill">Hito tecnológico</div>
+            <p>Sistemas conectados, web pública, multimedia.</p>
+            <div class="pill">Impacto en Ing. de Software</div>
+            <p>Multithreading y cliente–servidor; optimización para audio y video.</p>
+            <div class="pill">Impacto en HCI</div>
+            <p>Interfaces más ricas y dinámicas; nacimiento de la web.</p>
+          </div>
+
+          <nav class="card-nav">
+            <a class="nav-btn prev" href="#c-1980s" aria-label="Ir a 1980s">◀</a>
+            <a class="nav-btn next" href="#c-2000s" aria-label="Ir a 2000s">▶</a>
+          </nav>
+        </article>
+
+        <!-- 2000s -->
+        <article class="card" id="c-2000s" tabindex="0" aria-labelledby="t-2000s">
+          <header class="card-head">
+            <span class="badge">2000s</span>
+            <h2 class="card-title" id="t-2000s">Móvil · Bajo consumo</h2>
+            <a class="btn expand" href="#c-2000s" aria-label="Ampliar 2000s">Ampliar</a>
+            <a class="btn close" href="#rail" aria-label="Cerrar ampliación">×</a>
+          </header>
+
+          <figure class="card-figure img-2000s" role="img"
+                  aria-label="Smartphones y procesadores de bajo consumo"></figure>
+
+          <div class="card-body">
+            <div class="pill">Hito tecnológico</div>
+            <p>Dispositivos móviles y procesadores low-power.</p>
+            <div class="pill">Impacto en Ing. de Software</div>
+            <p>Optimización para consumo energético; <em>async I/O</em>.</p>
+            <div class="pill">Impacto en HCI</div>
+            <p>Interfaces táctiles y adaptativas; experiencia centrada en el usuario móvil.</p>
+          </div>
+
+          <nav class="card-nav">
+            <a class="nav-btn prev" href="#c-1990s" aria-label="Ir a 1990s">◀</a>
+            <a class="nav-btn next" href="#c-2010s" aria-label="Ir a 2010s">▶</a>
+          </nav>
+        </article>
+
+        <!-- 2010s -->
+        <article class="card" id="c-2010s" tabindex="0" aria-labelledby="t-2010s">
+          <header class="card-head">
+            <span class="badge">2010s</span>
+            <h2 class="card-title" id="t-2010s">Multinúcleo · Paralelismo</h2>
+            <a class="btn expand" href="#c-2010s" aria-label="Ampliar 2010s">Ampliar</a>
+            <a class="btn close" href="#rail" aria-label="Cerrar ampliación">×</a>
+          </header>
+
+          <figure class="card-figure img-2010s" role="img"
+                  aria-label="CPU multinúcleo y GPGPU para cómputo paralelo"></figure>
+
+          <div class="card-body">
+            <div class="pill">Hito tecnológico</div>
+            <p>Procesadores multinúcleo; GPGPU y paralelismo generalizado.</p>
+            <div class="pill">Impacto en Ing. de Software</div>
+            <p>Arquitecturas concurrentes; software escalable y distribuido.</p>
+            <div class="pill">Impacto en HCI</div>
+            <p>Mayor fluidez multitarea; apps intensivas en datos.</p>
+          </div>
+
+          <nav class="card-nav">
+            <a class="nav-btn prev" href="#c-2000s" aria-label="Ir a 2000s">◀</a>
+            <a class="nav-btn next" href="#c-2020s" aria-label="Ir a 2020s–hoy">▶</a>
+          </nav>
+        </article>
+
+        <!-- 2020s–hoy -->
+        <article class="card" id="c-2020s" tabindex="0" aria-labelledby="t-2020s">
+          <header class="card-head">
+            <span class="badge">2020s–hoy</span>
+            <h2 class="card-title" id="t-2020s">IA · Nube híbrida · Edge</h2>
+            <a class="btn expand" href="#c-2020s" aria-label="Ampliar 2020s–hoy">Ampliar</a>
+            <a class="btn close" href="#rail" aria-label="Cerrar ampliación">×</a>
+          </header>
+
+          <figure class="card-figure img-2020s" role="img"
+                  aria-label="IA integrada, edge computing y XR"></figure>
+
+          <div class="card-body">
+            <div class="pill">Hito tecnológico</div>
+            <p>Integración de IA, edge computing y XR.</p>
+            <div class="pill">Impacto en Ing. de Software</div>
+            <p>Algoritmos en tiempo real; optimización híbrida local–nube.</p>
+            <div class="pill">Impacto en HCI</div>
+            <p>Voz, visión y gestos; experiencias inmersivas.</p>
+          </div>
+
+          <nav class="card-nav">
+            <a class="nav-btn prev" href="#c-2010s" aria-label="Ir a 2010s">◀</a>
+            <a class="nav-btn next" href="#c-1940s" aria-label="Ir a 1940s–1960s">▶</a>
+          </nav>
+        </article>
+      </div>
     </section>
   </main>
 
