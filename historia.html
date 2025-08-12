@@ -8,7 +8,7 @@
   <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
 
-  <!-- Estilos existentes -->
+  <!-- Estilos existentes del sitio -->
   <link rel="stylesheet" href="header.css">
   <!-- Estilos de esta página -->
   <link rel="stylesheet" href="historia.css">
@@ -33,7 +33,7 @@
     <!-- Hero -->
     <section class="hero">
       <div class="hero__wrap">
-        <h1 class="hero__title">Historia de la Ingeniería de Sistemas</h1>
+        <h1 class="hero__title">Evolución de la Ingeniería de Software y la Eficiencia de Procesamiento</h1>
         <p class="hero__subtitle">
           De <span>batch processing</span> a <span>IA en tiempo real</span>:
           hitos que cambiaron la <strong>ingeniería de software</strong>,
@@ -42,13 +42,99 @@
       </div>
     </section>
 
+    <!-- Respuesta a la pregunta del grupo -->
+    <section class="answer" id="respuesta">
+      <h2>¿Cómo ha evolucionado esta tecnología (nuestro grupo)?</h2>
+
+      <p class="lead">
+        Pasamos de cómputo lento, monousuario y por lotes a plataformas distribuidas,
+        paralelas e inteligentes. Cada salto técnico (CPU, memoria y E/S) impulsó cambios
+        en <strong>paradigmas de programación</strong>, <strong>arquitecturas</strong> y
+        <strong>técnicas de optimización</strong>, logrando interfaces cada vez más
+        <em>naturales y fluidas</em> (HCI, cap. 2).
+      </p>
+
+      <div class="a-grid">
+        <article class="milestone">
+          <h3>1940s–1960s · Batch y hardware limitado</h3>
+          <ul>
+            <li><b>Software:</b> ensamblador/código máquina; optimización manual extrema.</li>
+            <li><b>Eficiencia:</b> planificación por lotes, gestión rígida de memoria; E/S lenta.</li>
+            <li><b>HCI:</b> tarjetas perforadas, latencia de horas.</li>
+          </ul>
+        </article>
+
+        <article class="milestone">
+          <h3>1960s–1970s · Time-Sharing en mainframes</h3>
+          <ul>
+            <li><b>Software:</b> FORTRAN/COBOL; multiprogramación y <i>schedulers</i> (Round-Robin).</li>
+            <li><b>Eficiencia:</b> mejor uso de CPU compartida; memoria virtual.</li>
+            <li><b>HCI:</b> terminales de texto e interacción casi en tiempo real.</li>
+          </ul>
+        </article>
+
+        <article class="milestone">
+          <h3>1980s · PC y primeras GUI</h3>
+          <ul>
+            <li><b>Software:</b> orientación a eventos, toolkits de UI; compiladores más optimizadores.</li>
+            <li><b>Eficiencia:</b> cachés y pipelines; gráficos acelerados básicos.</li>
+            <li><b>HCI:</b> mouse, ventanas e íconos → gran salto en usabilidad.</li>
+          </ul>
+        </article>
+
+        <article class="milestone">
+          <h3>1990s · Red, web y multimedia</h3>
+          <ul>
+            <li><b>Software:</b> cliente-servidor, multithreading, BD a gran escala.</li>
+            <li><b>Eficiencia:</b> SIMD, superscalar; optimización de E/S y códecs.</li>
+            <li><b>HCI:</b> web gráfica e interfaces dinámicas.</li>
+          </ul>
+        </article>
+
+        <article class="milestone">
+          <h3>2000s · Móvil y bajo consumo</h3>
+          <ul>
+            <li><b>Software:</b> apps móviles; <i>async I/O</i>, patrones reactivos.</li>
+            <li><b>Eficiencia:</b> ARM/SoC, políticas de ahorro energético, compresión.</li>
+            <li><b>HCI:</b> pantallas táctiles y diseño responsivo.</li>
+          </ul>
+        </article>
+
+        <article class="milestone">
+          <h3>2010s · Multinúcleo y paralelismo</h3>
+          <ul>
+            <li><b>Software:</b> concurrencia, microservicios, GPGPU; Map-Reduce/streaming.</li>
+            <li><b>Eficiencia:</b> escalado horizontal, cacheo, vectorización.</li>
+            <li><b>HCI:</b> UIs fluidas sobre datos masivos y tiempo real.</li>
+          </ul>
+        </article>
+
+        <article class="milestone">
+          <h3>2020s–hoy · IA, nube híbrida y edge</h3>
+          <ul>
+            <li><b>Software:</b> MLOps, inferencia en tiempo real, cuantización/distilación.</li>
+            <li><b>Eficiencia:</b> colocación híbrida (nube/edge), aceleradores (GPU/TPU/NPU).</li>
+            <li><b>HCI:</b> voz, visión y gestos; experiencias inmersivas (XR).</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="closing">
+        <b>Conclusión:</b> la disciplina evolucionó al ritmo del hardware: cada mejora en CPU,
+        memoria y E/S habilitó nuevos modelos de programación y arquitecturas más eficientes,
+        logrando sistemas escalables y experiencias de usuario más naturales.
+      </p>
+    </section>
+
     <!-- Timeline -->
     <section class="timeline" aria-label="Línea de tiempo de la evolución tecnológica">
+      <h2 class="timeline-title">Línea de tiempo — Ingeniería de Software & Eficiencia de Procesamiento</h2>
+
       <!-- 1940s–1960s -->
       <article class="t-card" tabindex="0">
         <div class="t-meta">
           <span class="t-badge">1940s–1960s</span>
-          <h2 class="t-title">Válvulas → Transistores · Batch Processing</h2>
+          <h3 class="t-title">Válvulas → Transistores · Batch Processing</h3>
         </div>
         <div class="t-content">
           <div class="t-chip">Hito tecnológico</div>
@@ -64,7 +150,7 @@
       <article class="t-card" tabindex="0">
         <div class="t-meta">
           <span class="t-badge">1960s–1970s</span>
-          <h2 class="t-title">Mainframes · Time-Sharing</h2>
+          <h3 class="t-title">Mainframes · Time-Sharing</h3>
         </div>
         <div class="t-content">
           <div class="t-chip">Hito tecnológico</div>
@@ -80,7 +166,7 @@
       <article class="t-card" tabindex="0">
         <div class="t-meta">
           <span class="t-badge">1980s</span>
-          <h2 class="t-title">Microcomputadoras · Primeras GUI</h2>
+          <h3 class="t-title">Microcomputadoras · Primeras GUI</h3>
         </div>
         <div class="t-content">
           <div class="t-chip">Hito tecnológico</div>
@@ -96,7 +182,7 @@
       <article class="t-card" tabindex="0">
         <div class="t-meta">
           <span class="t-badge">1990s</span>
-          <h2 class="t-title">Redes · Multimedia · Multitarea</h2>
+          <h3 class="t-title">Redes · Multimedia · Multitarea</h3>
         </div>
         <div class="t-content">
           <div class="t-chip">Hito tecnológico</div>
@@ -112,7 +198,7 @@
       <article class="t-card" tabindex="0">
         <div class="t-meta">
           <span class="t-badge">2000s</span>
-          <h2 class="t-title">Móviles · Bajo Consumo</h2>
+          <h3 class="t-title">Móviles · Bajo Consumo</h3>
         </div>
         <div class="t-content">
           <div class="t-chip">Hito tecnológico</div>
@@ -128,7 +214,7 @@
       <article class="t-card" tabindex="0">
         <div class="t-meta">
           <span class="t-badge">2010s</span>
-          <h2 class="t-title">Multinúcleo · Paralelismo</h2>
+          <h3 class="t-title">Multinúcleo · Paralelismo</h3>
         </div>
         <div class="t-content">
           <div class="t-chip">Hito tecnológico</div>
@@ -144,7 +230,7 @@
       <article class="t-card" tabindex="0">
         <div class="t-meta">
           <span class="t-badge">2020s–Actualidad</span>
-          <h2 class="t-title">IA · Edge · XR</h2>
+          <h3 class="t-title">IA · Edge · XR</h3>
         </div>
         <div class="t-content">
           <div class="t-chip">Hito tecnológico</div>

@@ -28,7 +28,7 @@ body{
 /* Utilidad */
 .container{max-width:1200px;margin-inline:auto;padding:0 20px}
 
-/* Hero */
+/* ================= Hero ================= */
 .hero{
   position:relative;
   isolation:isolate;
@@ -59,13 +59,57 @@ body{
 .hero__subtitle span{color:#fff}
 .hero__subtitle strong{color:#fff}
 
-/* Timeline */
+/* ============ Answer (respuesta del grupo) ============ */
+.answer{
+  max-width:1100px; margin:24px auto 16px; padding:18px 20px;
+  background: linear-gradient(180deg, rgba(0,0,0,.58), rgba(0,0,0,.42));
+  border:1px solid #00ffff33; border-radius:16px; box-shadow: var(--shadow);
+}
+.answer h2{
+  margin:0 0 10px; font-size: clamp(18px, 2.6vw, 26px);
+  text-shadow: 0 0 12px rgba(0,255,255,.25);
+}
+.answer .lead{
+  margin:0 0 12px; color: var(--muted); line-height:1.6;
+}
+
+/* grid de hitos en 1–2 columnas */
+.a-grid{
+  display:grid; gap:14px; margin-top:10px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px){
+  .a-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+.milestone{
+  padding:14px; border:1px solid #00ffff22; border-radius:14px;
+  background: rgba(0,0,0,.35);
+}
+.milestone h3{
+  margin:0 0 6px; font-size: clamp(14px, 2.2vw, 18px);
+  border-left:3px solid var(--neon); padding-left:10px;
+}
+.milestone ul{ margin:0; padding-left:18px; }
+.milestone li{ margin:6px 0; }
+
+.answer .closing{
+  margin-top:12px; color:#dffbff;
+  border-top:1px dashed #00ffff33; padding-top:10px;
+}
+
+/* ================= Timeline ================= */
 .timeline{
   --gap: 38px;
   position:relative;
   margin: 24px auto 80px;
   padding: 0 20px;
   max-width: 1100px;
+}
+.timeline-title{
+  text-align:center; margin:0 0 10px;
+  font-size: clamp(18px, 2.6vw, 26px);
+  color:#eafcff; text-shadow:0 0 10px rgba(0,255,255,.25);
 }
 .timeline::before{
   content:"";
@@ -160,11 +204,9 @@ body{
   outline-offset: 4px;
 }
 
-/* Footer */
+/* ================= Footer ================= */
 .footer{
   text-align:center;
   padding:36px 16px 56px;
   color:var(--muted);
 }
-
-/* Sin JS: visibles por defecto (no hay clase .reveal aquí) */
