@@ -18,7 +18,6 @@
                         <ul class="dropdown-menu">
                             <li><a href="index.html">🏠 Inicio</a></li>
                             <li><a href="historia.html">📗 Historia</a></li>
-                            <li><a href="CRUD.html">GameHub</a></li>
                             <li><a href="mistake.html">⚠️ Errores</a></li>
                         </ul>
                     </li>
@@ -34,23 +33,18 @@
                 Análisis de los aprendizajes y errores más frecuentes que presentan los usuarios en relación a los sistemas de ingeniería
             </p>
         </div>
-
-        <!-- Introduction -->
-        <div class="bg-blue-800/30 backdrop-blur-sm rounded-xl p-8 mb-12 border border-blue-700/50">
+        <div class="rounded-xl p-8 mb-13">
             <h2 class="text-2xl font-semibold text-blue-100 mb-4">Contexto del Problema</h2>
             <p class="text-blue-200 text-lg leading-relaxed">
-                Los errores y dificultades de aprendizaje más comunes que presentan los usuarios son el resultado de un 
-                <span class="text-blue-300 font-semibold">desajuste entre las capacidades cognitivas del ser humano</span> 
+                Los errores y dificultades de aprendizaje más comunes que presentan los usuarios son el resultado de un
+                <span class="text-blue-300 font-semibold">desajuste entre las capacidades cognitivas del ser humano</span>
                 y las características del sistema.
             </p>
         </div>
-
-        <!-- Error Cards -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Error 1: Brecha de modelo mental -->
-            <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-blue-700/30 card-transition hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/20">
+            <div class="bg-gray-800/40 backdrop-blur-sm rounded-xl border border-gray-600/30 card-transition hover:border-gray-500/50 hover:shadow-xl hover:shadow-blue-900/20">
                 <input type="checkbox" id="toggle1" class="toggle-checkbox">
-                <div class="card-content p-6">
+                <div class="rounded-xl card-content p-6">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mr-4">
@@ -58,14 +52,13 @@
                                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-blue-100">Brecha de Modelo Mental e Inconsistencia</h3>
+                            <h3 class="text-2xl font-bold text-blue-100">Brecha de Modelo Mental</h3>
                         </div>
                         <label for="toggle1" class="toggle-label"></label>
                     </div>
                     <p class="text-blue-200 text-lg mb-4">
                         Desajuste entre las expectativas del usuario y la organización real del sistema.
                     </p>
-                    
                     <div class="expand-content">
                         <div class="border-t border-blue-700/30 pt-4">
                             <div class="bg-blue-900/30 rounded-lg p-4 mb-4">
@@ -88,11 +81,9 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Error 2: Carga cognitiva excesiva -->
             <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-blue-700/30 card-transition hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/20">
                 <input type="checkbox" id="toggle2" class="toggle-checkbox">
-                <div class="card-content p-6">
+                <div class="rounded-xl card-content p-6">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mr-4">
@@ -107,7 +98,6 @@
                     <p class="text-blue-200 text-lg mb-4">
                         Sobrecarga de la memoria de trabajo del usuario con demasiada información simultánea.
                     </p>
-                    
                     <div class="expand-content">
                         <div class="border-t border-blue-700/30 pt-4">
                             <div class="bg-blue-900/30 rounded-lg p-4 mb-4">
@@ -119,8 +109,8 @@
                             <div class="bg-red-900/20 rounded-lg p-4">
                                 <h4 class="text-red-300 font-semibold mb-2">⚠️ Problema:</h4>
                                 <p class="text-blue-200">
-                                    Se le pide al usuario que realice una tarea compleja que requiere múltiples pasos o valores de entrada. 
-                                    El usuario podría olvidar los datos, lo que lleva a una mala validación de los datos y frustración 
+                                    Se le pide al usuario que realice una tarea compleja que requiere múltiples pasos o valores de entrada.
+                                    El usuario podría olvidar los datos, lo que lleva a una mala validación de los datos y frustración
                                     por parte del usuario.
                                 </p>
                             </div>
@@ -128,11 +118,9 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Error 3: Falta de retroalimentación -->
             <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-blue-700/30 card-transition hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/20">
                 <input type="checkbox" id="toggle3" class="toggle-checkbox">
-                <div class="card-content p-6">
+                <div class="rounded-xl card-content p-6">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-4">
@@ -140,14 +128,13 @@
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-blue-100">Falta de Retroalimentación Clara</h3>
+                            <h3 class="text-2xl font-bold text-blue-100">Falta de Retroalimentación </h3>
                         </div>
                         <label for="toggle3" class="toggle-label"></label>
                     </div>
                     <p class="text-blue-200 text-lg mb-4">
                         Ausencia de respuestas inmediatas y comprensibles del sistema hacia las acciones del usuario.
                     </p>
-                    
                     <div class="expand-content">
                         <div class="border-t border-blue-700/30 pt-4">
                             <div class="bg-red-900/20 rounded-lg p-4">
@@ -162,11 +149,9 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Error 4: Falta de capacitación -->
             <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-blue-700/30 card-transition hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/20">
                 <input type="checkbox" id="toggle4" class="toggle-checkbox">
-                <div class="card-content p-6">
+                <div class="rounded-xl card-content p-6">
                     <div class="flex items-center justify-between mb-4">
                         <div class="flex items-center">
                             <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
@@ -174,27 +159,26 @@
                                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-2xl font-bold text-blue-100">Errores por Falta de Capacitación</h3>
+                            <h3 class="text-2xl font-bold text-blue-100">Falta de Capacitación</h3>
                         </div>
                         <label for="toggle4" class="toggle-label"></label>
                     </div>
                     <p class="text-blue-200 text-lg mb-4">
                         Ausencia de documentación clara y capacitación adecuada para el uso del sistema.
                     </p>
-                    
                     <div class="expand-content">
                         <div class="border-t border-blue-700/30 pt-4">
                             <div class="bg-blue-900/30 rounded-lg p-4 mb-4">
                                 <h4 class="text-blue-100 font-semibold mb-2">🔍 Contexto:</h4>
                                 <p class="text-blue-200">
-                                    Aunque la ingeniería de sistemas se centra en la funcionalidad del sistema, la falta de una 
+                                    Aunque la ingeniería de sistemas se centra en la funcionalidad del sistema, la falta de una
                                     documentación clara provoca errores por parte del usuario.
                                 </p>
                             </div>
                             <div class="bg-red-900/20 rounded-lg p-4">
                                 <h4 class="text-red-300 font-semibold mb-2">⚠️ Resultado:</h4>
                                 <p class="text-blue-200">
-                                    Los usuarios no saben cómo utilizar las funcionalidades avanzadas o incluso las básicas, 
+                                    Los usuarios no saben cómo utilizar las funcionalidades avanzadas o incluso las básicas,
                                     lo que lleva a un uso ineficiente y a la creencia de que el sistema es poco intuitivo.
                                 </p>
                             </div>
@@ -203,9 +187,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
     <footer>
         <p>© 2025 SoftPro • Powered by SKVJ</p>
     </footer>

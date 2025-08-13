@@ -2,8 +2,9 @@ body {
     margin: 0;
     font-family: 'Orbitron', sans-serif;
     color: white;
-    background: url('img/FONDO.png') no-repeat center center fixed;
+    background: url('img/fondo.png') no-repeat center center fixed;
     background-size: cover;
+    background-color: #0004ff;
 }
 
 .inicio {
