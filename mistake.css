@@ -35,8 +35,8 @@ body {
 }
 
 .mb-13{
-    background-color: rgba(0, 38, 255, 0.411);
-    box-shadow: 0px 0px 5px rgba(1, 18, 255, 0.836);
+    background-color: rgba(0, 29, 190, 0.411);
+    box-shadow: 0px 0px 5px rgba(4, 10, 88, 0.836);
 }
 
 .mb-6 {
@@ -71,6 +71,12 @@ body {
     margin-top: 30px;
     padding: 10px;
     background-color: rgba(0, 0, 255, 0.116);
+    transition: transform 0.3s ease;
+    box-shadow: 0px 0px 5px rgba(43, 57, 255, 0.836);
+}
+
+.p-6:hover {
+    transform: scale(1.09);
 }
 
 .p-8 {
@@ -310,13 +316,13 @@ body {
     background-color: #072b91;
 }
 
-.expand-content {
+.expand-contenido {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
 }
 
-.toggle-checkbox:checked+.card-content .expand-content {
+.toggle-checkbox:checked+.card-contenido .expand-contenido {
     max-height: 500px;
 }
 
@@ -324,15 +330,15 @@ body {
     content: "Ver más";
 }
 
-.toggle-checkbox:checked+.card-content .toggle-label::after {
+.toggle-checkbox:checked+.card-contenido .toggle-label::after {
     content: "Ver menos";
 }
 
-.toggle-checkbox:checked+.card-content .toggle-label {
+.toggle-checkbox:checked+.card-contenido .toggle-label {
     background-color: #1d4ed8;
 }
 
-.main-content {
+.main-contenido {
     margin-top: 80px;
     padding-top: 2rem;
 }
