@@ -1,0 +1,186 @@
+/* ===== Base ===== */
+*{ box-sizing:border-box }
+html,body{ height:100% }
+html{ scroll-behavior:smooth }
+body{
+  margin:0; font-family:'Orbitron', sans-serif; color:#fff;
+  background: url('img/fondo4.avif') no-repeat center center fixed;
+  background-size: cover; background-color:#0004ff;
+  padding-top:120px;
+}
+
+/* Intro */
+.inicio{ display:flex; justify-content:center; align-items:center; min-height:140px; padding:10px 16px }
+.inicio h1{ margin:0; text-align:center; max-width:820px; line-height:1.15;
+  font-size: clamp(24px, 4vw, 40px); text-shadow:0 0 10px #0004ff, 0 0 20px #1900ff; }
+
+/* Resumen + chips */
+.container{ max-width:1100px; margin:0 auto; padding:0 16px }
+.container-top{ position:relative; z-index:3 }
+
+.lead{
+  margin:0 0 10px; padding:14px 16px; line-height:1.6; color:#dfe8ff;
+  background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.28));
+  border:1px solid rgba(255,255,255,.18); border-radius:14px; backdrop-filter: blur(10px);
+  text-align:center;
+}
+
+.period-nav{
+  display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 12px;
+  justify-content:center; position:relative; z-index:3;
+}
+.chip{
+  display:inline-block; padding:8px 12px; border-radius:999px; text-decoration:none;
+  color:#eaffff; border:1px solid rgba(255,255,255,.25);
+  background:linear-gradient(90deg, rgba(40,120,255,.18), rgba(160,60,255,.18));
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.chip:hover{ transform:translateY(-2px); border-color:#8ab6ff;
+  box-shadow:0 0 14px rgba(0,120,255,.35), 0 0 20px rgba(160,60,255,.22) }
+.chip.active{ border-color:#fff; box-shadow:0 0 10px rgba(255,255,255,.4) }
+
+/* Timeline horizontal */
+:root{
+  --slide-h: 400px;
+  --axisY: calc(var(--slide-h) * .54);
+  --vpad: 20px;
+  --progress-top: 128px;
+}
+.hwrap{ position:relative; max-width:1200px; margin: 10px auto 60px; padding:0 0 6px }
+.progress{
+  position: sticky; top: var(--progress-top);
+  height:4px; width:100%; background: rgba(255,255,255,.15);
+  border-radius:999px; overflow:hidden; margin:0 auto 6px; z-index:2
+}
+.progress__bar{ height:100%; width:0%; background: linear-gradient(90deg,#7b2cff,#00e5ff) }
+
+.htrack{
+  position:relative; display:grid; grid-auto-flow:column;
+  grid-auto-columns: clamp(300px, 68vw, 480px);
+  grid-auto-rows: var(--slide-h);
+  gap:24px; overflow-x:auto; overflow-y:hidden; padding:12px 18px 28px;
+  scroll-snap-type:x mandatory; scroll-padding-inline:18px;
+  scrollbar-width: thin; scrollbar-color: #8ab6ff transparent;
+}
+.htrack::-webkit-scrollbar{ height:10px }
+.htrack::-webkit-scrollbar-thumb{ background:linear-gradient(90deg,#7b2cff,#00e5ff); border-radius:999px }
+
+/* línea central */
+.htrack::before{
+  content:""; position:absolute; left:0; right:0; top:var(--axisY);
+  height:3px; border-radius:2px;
+  background: linear-gradient(90deg,#753cdf,#6440d6,#5344cd,#3b3fc0,#1c33b6);
+  box-shadow:0 0 16px rgba(255,255,255,.22); pointer-events:none;
+}
+
+/* Alternancia arriba/abajo */
+.slide{ position:relative; height:var(--slide-h); scroll-snap-align:center; scroll-snap-stop:always;
+  display:flex; align-items:flex-start; padding-block: var(--vpad); }
+.slide:nth-child(even){ align-items:flex-end }
+.slide .dot{
+  position:absolute; top:var(--axisY); left:50%; transform:translate(-50%, -50%);
+  width:18px; height:18px; border-radius:50%; border:3px solid #fff;
+  background: radial-gradient(circle at 30% 30%, #fff 0 20%, #00e5ff 30%, #7b2cff 70%);
+  box-shadow:0 0 10px #00e5ff, 0 0 16px #7b2cff; pointer-events:none;
+}
+
+/* Card preview compacta (+ imagen) */
+.card{
+  width:100%; background:linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,0,0,.4));
+  border:1px solid rgba(255,255,255,.22); border-radius:18px; backdrop-filter: blur(10px);
+  box-shadow:0 8px 28px rgba(0,0,0,.18); transition: transform .25s ease; display:flex; flex-direction:column;
+}
+.card:hover{ transform: translateY(-3px) }
+
+.preview{ max-height: calc(var(--slide-h) - 2*var(--vpad)); overflow:hidden; }
+.head{
+  position: sticky; top: 0; z-index: 1; display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  margin:0; padding:12px 14px; background:linear-gradient(180deg,rgba(0,0,0,.65),rgba(0,0,0,.35));
+  border-top-left-radius:18px; border-top-right-radius:18px; border-bottom:1px solid rgba(255,255,255,.08);
+}
+.badge{ display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px;
+  border:1px solid rgba(255,255,255,.28); background:linear-gradient(90deg, rgba(120,60,255,.22), rgba(0,120,255,.22));
+  box-shadow: inset 0 0 16px rgba(255,255,255,.15);
+}
+.head h2{ margin:0; font-size: clamp(16px, 2.2vw, 22px) }
+.head-actions{ margin-left:auto; display:flex; gap:8px }
+.btn{ padding:6px 10px; border-radius:10px; font-size:12px; color:#eaffff; background:rgba(0,0,0,.25);
+  border:1px solid rgba(255,255,255,.28); cursor:pointer }
+.btn:hover{ transform: translateY(-2px); border-color:#8ab6ff; box-shadow:0 0 12px rgba(0,120,255,.35), 0 0 18px rgba(160,60,255,.18) }
+
+.media{ margin: 8px 14px; }
+.media img{
+  width:100%; border-radius:14px; object-fit:cover; aspect-ratio: 21/9;
+  border:1px solid rgba(255,255,255,.18)
+}
+
+/* ---------- Modal ---------- */
+.modal-backdrop[hidden], .modal[hidden]{ display:none !important }
+.modal-backdrop{
+  position: fixed; inset:0; background: rgba(0,0,0,.58); z-index: 9998; opacity:0; transition: opacity .2s ease;
+}
+.modal{
+  position: fixed; top:50%; left:50%; transform: translate(-50%, -50%) scale(.98);
+  width: min(92vw, 980px); max-height: 88vh; overflow:auto; z-index: 9999;
+  background: linear-gradient(180deg, rgba(0,0,0,.75), rgba(0,0,0,.55));
+  border:1px solid rgba(255,255,255,.35); border-radius: 18px; backdrop-filter: blur(8px);
+  box-shadow:0 14px 40px rgba(0,0,0,.45), 0 0 28px rgba(0,120,255,.28), 0 0 40px rgba(160,60,255,.18);
+  opacity:0; transition: opacity .2s ease, transform .2s ease; padding: 48px 0 14px;
+}
+.modal.open{ opacity:1; transform: translate(-50%, -50%) scale(1) }
+.modal-backdrop.open{ opacity:1 }
+
+.modal__close{
+  position: absolute; top:10px; right:12px;
+  border:none; background:transparent; color:#fff; font-size:28px; line-height:1;
+  padding:6px 8px; cursor:pointer; z-index:10000;
+}
+.modal__nav{
+  position: absolute; top:50%; transform: translateY(-50%);
+  width:44px; height:44px; border-radius:999px; border:1px solid rgba(255,255,255,.35);
+  background: rgba(0,0,0,.35); color:#fff; cursor:pointer; z-index: 10000;
+  display:flex; align-items:center; justify-content:center; backdrop-filter: blur(4px);
+}
+.modal__nav.prev{ left: 10px; }
+.modal__nav.next{ right: 10px; }
+
+.modal__content{ padding: 0 56px 10px }
+@media (max-width: 900px){ .modal__content{ padding: 0 18px 10px } }
+
+.modal-head{ border-radius:18px 18px 0 0; margin:0 0 10px }
+.modal__grid{
+  display:grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap:18px; align-items:start;
+}
+@media (max-width: 900px){
+  .modal__grid{ grid-template-columns: 1fr; }
+}
+.modal__media img{
+  width:100%; height:auto; border-radius:14px; border:1px solid rgba(255,255,255,.2);
+  object-fit:cover; aspect-ratio: 16/9;
+}
+.modal__text .pill{
+  display:inline-block; padding:6px 10px; border-radius:999px; font-size:11px; letter-spacing:.04em;
+  color:#cfe2ff; border:1px solid rgba(255,255,255,.22); background: rgba(0,0,0,.28);
+  margin: 0 0 6px; text-align:center;
+}
+.modal__text .block{ margin-bottom:10px }
+.modal__text p{ margin:0; color:#e8f1ff; line-height:1.6 }
+
+/* Colores de cards */
+.card1{ background:#764ba249 } .card1:hover{ background: rgba(54,8,75,.45) }
+.card2{ background:#734cf554 } .card2:hover{ background: rgba(98,41,204,.45) }
+.card3{ background:#5444cd5b } .card3:hover{ background: rgba(52,41,204,.45) }
+.card4{ background:#3b3fc062 } .card4:hover{ background: rgba(28,40,212,.45) }
+.card5{ background:#1c33b669 } .card5:hover{ background: rgba(12,19,116,.45) }
+.card6{ background:#2540b969 } .card6:hover{ background: rgba(20,70,200,.45) }
+.card7{ background:#1a5ad169 } .card7:hover{ background: rgba(15,90,255,.45) }
+
+/* Footer */
+footer{ text-align:center; color:#dfe8ff; padding:24px 16px 40px; background: transparent }
+footer p{ margin:0 }
+
+/* Responsive */
+@media (max-width: 700px){
+  .htrack{ grid-auto-columns: 88% }
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SoftPro — Comportamiento de las personas</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="comportamiento.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="menu container">
+      <img src="img/Logoo.png" class="logo" alt="SoftPro">
+      <nav class="navbar" aria-label="Navegación principal">
+        <ul>
+          <li class="dropdown">
+            <a href="#" class="menu-trigger">☰ Menú</a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">🏠 Inicio</a></li>
+                            <li><a href="carrusel.html">📗 Preguntas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>¿Cómo cambió el comportamiento de las personas?</h1>
+    <p class="tagline">
+      Ingeniería de <strong>software</strong> + <strong>eficiencia de procesamiento</strong> ⇒
+      usuarios más <em>activos</em>, <em>exigentes</em> y <em>diversos</em>.
+    </p>
+  </section>
+
+  <!-- Resumen -->
+  <section class="container">
+    <div class="glass lead">
+      <p>
+        A medida que mejoraron la <strong>CPU</strong>, la <strong>memoria</strong> y la <strong>E/S</strong>,
+        el software respondió mejor y el rol de las personas cambió: de usuarios pasivos que esperaban resultados,
+        a usuarios que <strong>prueban, exploran y exigen</strong> rapidez, facilidad y personalización.
+        Esto aumentó la <strong>accesibilidad</strong>, pero también la <strong>dependencia</strong> y la
+        <strong>opacidad</strong> de los sistemas (HCI, cap. 2).
+      </p>
+    </div>
+  </section>
+
+  <!-- Flip cards: Antes / Hoy -->
+  <section class="container">
+    <h2 class="section-title">De <span>Antes</span> → <span>Hoy</span></h2>
+    <div class="grid flip-grid">
+      <!-- 1 -->
+      <article class="card flip" tabindex="0">
+        <div class="card__inner">
+          <div class="card__face card__face--front">
+            <h3>Rol del usuario</h3>
+            <p>Pasivo; sigue instrucciones y espera el resultado por lotes.</p>
+            <div class="pill">Antes</div>
+          </div>
+          <div class="card__face card__face--back">
+            <h3>Rol del usuario</h3>
+            <p>Activo; explora, compara, personaliza y espera feedback inmediato.</p>
+            <div class="pill pill--ok">Hoy</div>
+          </div>
+        </div>
+      </article>
+      <!-- 2 -->
+      <article class="card flip" tabindex="0">
+        <div class="card__inner">
+          <div class="card__face card__face--front">
+            <h3>Expectativa de tiempo</h3>
+            <p>Latencias de minutos/horas; interacción diferida.</p>
+            <div class="pill">Antes</div>
+          </div>
+          <div class="card__face card__face--back">
+            <h3>Expectativa de tiempo</h3>
+            <p><strong>Sub-segundo</strong>; realtime en apps, streaming y colaboración.</p>
+            <div class="pill pill--ok">Hoy</div>
+          </div>
+        </div>
+      </article>
+      <!-- 3 -->
+      <article class="card flip" tabindex="0">
+        <div class="card__inner">
+          <div class="card__face card__face--front">
+            <h3>Aprendizaje</h3>
+            <p>Manual y formación formal; altas barreras de entrada.</p>
+            <div class="pill">Antes</div>
+          </div>
+          <div class="card__face card__face--back">
+            <h3>Aprendizaje</h3>
+            <p>Onboarding, patrones conocidos y prueba/error segura.</p>
+            <div class="pill pill--ok">Hoy</div>
+          </div>
+        </div>
+      </article>
+      <!-- 4 -->
+      <article class="card flip" tabindex="0">
+        <div class="card__inner">
+          <div class="card__face card__face--front">
+            <h3>Accesibilidad</h3>
+            <p>Nicho técnico; pocos dispositivos de entrada.</p>
+            <div class="pill">Antes</div>
+          </div>
+          <div class="card__face card__face--back">
+            <h3>Accesibilidad</h3>
+            <p>Táctil, voz, lectores de pantalla, IA asistiva y diseño inclusivo.</p>
+            <div class="pill pill--ok">Hoy</div>
+          </div>
+        </div>
+      </article>
+      <!-- 5 -->
+      <article class="card flip" tabindex="0">
+        <div class="card__inner">
+          <div class="card__face card__face--front">
+            <h3>Comprensión del sistema</h3>
+            <p>Modelo mental sencillo; tareas acotadas.</p>
+            <div class="pill">Antes</div>
+          </div>
+          <div class="card__face card__face--back">
+            <h3>Comprensión del sistema</h3>
+            <p>Automatización e IA: más productividad pero mayor <em>caja negra</em>.</p>
+            <div class="pill pill--warn">Hoy</div>
+          </div>
+        </div>
+      </article>
+      <!-- 6 -->
+      <article class="card flip" tabindex="0">
+        <div class="card__inner">
+          <div class="card__face card__face--front">
+            <h3>Confianza & privacidad</h3>
+            <p>Datos locales; riesgos acotados.</p>
+            <div class="pill">Antes</div>
+          </div>
+          <div class="card__face card__face--back">
+            <h3>Confianza & privacidad</h3>
+            <p>Nube/Edge; consentimiento claro y control de datos esperado.</p>
+            <div class="pill pill--warn">Hoy</div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="hint">Tip: toca o presiona Enter sobre una tarjeta para ver <em>Antes/Hoy</em> 😊</p>
+  </section>
+
+  <!-- Impulsores técnicos -->
+  <section class="container">
+    <h2 class="section-title">¿Qué lo impulsó?</h2>
+    <div class="grid chips">
+      <div class="chip-card">
+        <span class="icon">🧠</span>
+        <h4>CPU & paralelismo</h4>
+        <p>Multinúcleo, vectorización y GPGPU permiten feedback fluido.</p>
+      </div>
+      <div class="chip-card">
+        <span class="icon">💾</span>
+        <h4>Memoria & caché</h4>
+        <p>Latencias reducidas, precarga y cacheo para UIs reactivas.</p>
+      </div>
+      <div class="chip-card">
+        <span class="icon">🔌</span>
+        <h4>E/S & red</h4>
+        <p>SSD, I/O asíncrona y redes rápidas habilitan tiempo real.</p>
+      </div>
+      <div class="chip-card">
+        <span class="icon">🧩</span>
+        <h4>Arquitecturas</h4>
+        <p>Microservicios, edge y nube híbrida acercan cómputo al usuario.</p>
+      </div>
+      <div class="chip-card">
+        <span class="icon">🧪</span>
+        <h4>Ingeniería de software</h4>
+        <p>Observabilidad, pruebas A/B, perf. budgets y diseño centrado en las personas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Implicaciones UX -->
+  <section class="container">
+    <h2 class="section-title">Implicaciones para IHM / UX</h2>
+    <div class="grid list-cards">
+      <div class="list-card">
+        <h4>Expectativas elevadas</h4>
+        <ul>
+          <li>Respuestas &lt; 200 ms para acciones comunes.</li>
+          <li>Estados de carga con progreso real o <em>skeletons</em>.</li>
+          <li>Personalización respetuosa (opt-in, control de datos).</li>
+        </ul>
+      </div>
+      <div class="list-card">
+        <h4>Transparencia</h4>
+        <ul>
+          <li>Explicar recomendaciones/IA con mensajes claros.</li>
+          <li>Deshacer/rehacer y trazabilidad de cambios.</li>
+          <li>Permitir “modo simple” y “modo avanzado”.</li>
+        </ul>
+      </div>
+      <div class="list-card">
+        <h4>Accesibilidad real</h4>
+        <ul>
+          <li>Contraste, foco visible y navegación por teclado.</li>
+          <li>Soporte de lector de pantalla y captions.</li>
+          <li>Alternativas de entrada: voz, táctil, hardware.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 SoftPro • Powered by SKVJ</p>
+  </footer>
+
+  <!-- JS: flip en click/Enter -->
+  <script>
+    // Flip para móviles/teclado
+    document.querySelectorAll('.card.flip').forEach(card => {
+      card.addEventListener('click', () => card.classList.toggle('is-flipped'));
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.classList.toggle('is-flipped');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

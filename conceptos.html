@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conceptos Claves</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="conceptos.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="menu container">
+            <img src="img/Logoo.png" class="logo" alt="SoftPro Logo">
+            <nav class="navbar">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="menu-trigger">☰ Menú</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">🏠 Inicio</a></li>
+                            <li><a href="carrusel.html">📗 Preguntas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="container-cards">
+            <div class="card intro">
+                <h2>Conceptos Claves en Ingeniería de Software</h2>
+                <p>
+                    La eficiencia en la ingeniería de software es fundamental para asegurar que los sistemas funcionen
+                    de manera
+                    óptima, aprovechando al máximo los recursos disponibles como tiempo, memoria y poder de
+                    procesamiento. En el
+                    capítulo 2 – <em>The Computer</em>, Alan Dix explica que la memoria del computador es un recurso
+                    limitado y
+                    jerarquizado.
+                </p>
+            </div>
+            <div class="citas-con-imagen">
+                <div class="citas-container">
+                    <div class="cita">
+                        <a href="#modal-memoria" class="card cita-btn">
+                            <span class="icon">💾</span>
+                            <span class="text">"Memory is not infinite; its limits can affect the performance of an
+                                interactive
+                                system."</span>
+                        </a>
+                    </div>
+
+                    <div class="cita">
+                        <a href="#modal-acceso" class="card cita-btn">
+                            <span class="icon">⚡</span>
+                            <span class="text">"Access time varies between types of memory: cache, main memory, disk and
+                                network
+                                storage have very different speeds."</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-memoria" class="modal">
+        <a class="modal-overlay" href="#" aria-label="Cerrar"></a>
+        <div class="modal-content">
+            <h3>💾 Memory is not infinite; its limits can affect the performance of an interactive system.</h3>
+            <p>
+                La memoria física disponible (RAM, almacenamiento, caché) impone restricciones técnicas que afectan el
+                diseño
+                del software. Un sistema interactivo puede volverse lento o inestable si consume más memoria de la que
+                el
+                hardware puede manejar eficientemente. Dix también enfatiza que la memoria se distribuye en una
+                jerarquía con
+                distintos niveles de velocidad y costo.
+            </p>
+            <a href="#" class="close-btn" aria-label="Cerrar">Cerrar ✕</a>
+        </div>
+    </div>
+
+    <div id="modal-acceso" class="modal">
+        <a class="modal-overlay" href="#" aria-label="Cerrar"></a>
+        <div class="modal-content">
+            <h3>⚡ Access time varies between types of memory: cache, main memory, disk and network storage have very
+                different
+                speeds.</h3>
+            <p>
+                No es lo mismo leer datos desde la caché del procesador que desde un disco duro o una base de datos
+                remota. La
+                ubicación de los datos dentro de la jerarquía de memoria influye directamente en la eficiencia del
+                procesamiento
+                y la experiencia del usuario.
+            </p>
+            <a href="#" class="close-btn" aria-label="Cerrar">Cerrar ✕</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 SoftPro • Powered by SKVJ</p>
+    </footer>
+</body>
+
+</html>

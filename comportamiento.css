@@ -1,0 +1,137 @@
+/* Base */
+*{ box-sizing: border-box }
+html,body{ height:100% }
+html{ scroll-behavior: smooth }
+body{
+  margin:0; font-family:'Orbitron', sans-serif; color:#fff;
+  background: url('img/fondo4.avif') no-repeat center center fixed;
+  background-size: cover; background-color:#0004ff;
+  padding-top: 120px;
+}
+
+/* Contenedor genérico */
+.container{ max-width: 1100px; margin: 0 auto; padding: 0 16px }
+
+/* Hero */
+.hero{
+  text-align:center; padding: 20px 16px 8px;
+}
+.hero h1{
+  margin:0; font-size: clamp(26px, 4.5vw, 44px);
+  text-shadow: 0 0 10px #0004ff, 0 0 20px #1900ff;
+}
+.tagline{
+  margin:10px auto 0; max-width:900px; line-height:1.5; color:#dfe8ff;
+  background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.28));
+  border:1px solid rgba(255,255,255,.18); border-radius:14px;
+  padding: 10px 14px; backdrop-filter: blur(10px);
+}
+
+/* Panel de resumen */
+.glass{
+  background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.28));
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:14px; backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,.18);
+}
+.lead{ padding:16px; color:#eaf2ff; margin: 12px 0 18px }
+
+/* Títulos de sección */
+.section-title{
+  margin: 18px 0 10px; text-align:center; font-size: clamp(20px, 3.2vw, 28px);
+}
+.section-title span{ color:#a6d5ff }
+
+/* Grid */
+.grid{
+  display:grid; gap: 16px;
+}
+@media (min-width: 720px){
+  .flip-grid{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 719.98px){
+  .flip-grid{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px){
+  .flip-grid{ grid-template-columns: 1fr; }
+}
+
+/* Tarjetas flip */
+.card{
+  perspective: 1000px; outline: none;
+}
+.card__inner{
+  position: relative; width:100%; height: 220px;
+  transform-style: preserve-3d; transition: transform .5s ease;
+}
+.card.is-flipped .card__inner{ transform: rotateY(180deg) }
+
+.card__face{
+  position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-start;
+  padding:14px; border-radius:16px; border:1px solid rgba(255,255,255,.22);
+  background: linear-gradient(180deg, rgba(0,0,0,.65), rgba(0,0,0,.4));
+  box-shadow:0 8px 28px rgba(0,0,0,.18);
+  backface-visibility: hidden;
+}
+.card__face h3{ margin:0 0 6px; font-size: clamp(16px, 2.4vw, 20px) }
+.card__face p{ margin:0; color:#cfe0ff; line-height:1.5 }
+.card__face--back{ transform: rotateY(180deg) }
+
+.pill{
+  margin-top:auto; align-self:flex-start; padding:6px 10px; border-radius:999px; font-size:12px;
+  border:1px solid rgba(255,255,255,.28);
+  background: linear-gradient(90deg, rgba(120,60,255,.22), rgba(0,120,255,.22));
+  box-shadow: inset 0 0 16px rgba(255,255,255,.12);
+}
+.pill--ok{ border-color:#7fffd4 }
+.pill--warn{ border-color:#ffd27f }
+
+/* Chips / Impulsores */
+.chips{
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 8px;
+}
+.chip-card{
+  padding:14px; border-radius:16px;
+  border:1px solid rgba(255,255,255,.22);
+  background: linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,0,0,.4));
+  box-shadow:0 8px 28px rgba(0,0,0,.18);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.chip-card:hover{
+  transform: translateY(-4px);
+  box-shadow:0 12px 36px rgba(0,0,0,.28), 0 0 20px rgba(0,120,255,.25), 0 0 16px rgba(160,60,255,.18);
+  border-color:#8ab6ff;
+}
+.chip-card .icon{ font-size:22px; display:inline-block; margin-bottom:6px }
+.chip-card h4{ margin:0 0 6px; font-size: clamp(14px, 2.2vw, 18px) }
+.chip-card p{ margin:0; color:#cfe0ff; line-height:1.5 }
+
+/* List cards (Implicaciones UX) */
+.list-cards{
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 8px;
+}
+.list-card{
+  padding:14px; border-radius:16px;
+  border:1px solid rgba(255,255,255,.22);
+  background: linear-gradient(180deg, rgba(0,0,0,.6), rgba(0,0,0,.4));
+  box-shadow:0 8px 28px rgba(0,0,0,.18);
+}
+.list-card h4{ margin:0 0 8px; font-size: clamp(15px, 2.4vw, 19px) }
+.list-card ul{ list-style: none; padding:0; margin:0 }
+.list-card li{
+  position:relative; padding-left:18px; margin:6px 0; color:#dfe8ff;
+}
+.list-card li::before{
+  content:"•"; position:absolute; left:0; top:0; color:#7b9cff;
+}
+
+/* Hint */
+.hint{
+  text-align:center; color:#bdd4ff; font-size: 13px; margin: 6px 0 0;
+}
+
+/* Footer */
+footer{ text-align:center; color:#dfe8ff; padding:24px 16px 40px }
+footer p{ margin:0 }

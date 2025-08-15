@@ -1,0 +1,208 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: url('img/fondo4.avif') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+}
+
+.container-cards {
+    max-width: 1200px;
+    margin: 120px auto 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.card {
+    background: linear-gradient(145deg, #051937, #00284d);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.65), 0 0 14px rgba(90, 160, 255, 0.18);
+    border-color: rgba(150, 200, 255, 0.25);
+}
+
+.intro h2 {
+    margin: 0 0 12px;
+    text-shadow: 0 0 10px #0004ff85, 0 0 20px #1900ff7e;
+}
+
+.intro p {
+    text-align: justify;
+    margin: 0;
+}
+
+.citas-con-imagen {
+    display: flex;
+    align-items: flex-star;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.citas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 2;
+}
+
+.cita-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #eaf3ff;
+    background: linear-gradient(145deg, #0a2a4a, #10395e);
+}
+
+.cita-btn .icon {
+    font-size: 1.2rem;
+    flex: 0 0 auto;
+}
+
+.cita-btn .text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(5, 12, 32, 0.65);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .25s ease, visibility .25s ease;
+    z-index: 9999;
+}
+
+.modal:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    display: block;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 720px;
+    width: min(92vw, 720px);
+    background: linear-gradient(160deg, #031a34, #072b4f);
+    border: 1px solid rgba(255, 255, 255, .12);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .65), 0 0 18px rgba(90, 160, 255, .18);
+    border-radius: 14px;
+    padding: 22px;
+    color: #e9f2ff;
+    z-index: 1;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #7cc0ff;
+}
+
+.modal-content p {
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    text-decoration: none;
+    background: #0c4aad;
+    color: #fff;
+    font-size: .9rem;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background .2s ease;
+}
+
+.close-btn:hover {
+    background: #0a3e91;
+}
+
+footer {
+    text-align: center;
+    padding: 18px 12px;
+    font-size: 0.85rem;
+    color: #c7d6ff;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.35);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro,
+.container-cards .card,
+.imagen-libro {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.intro {
+    animation-delay: 0.05s;
+}
+
+.container-cards>.card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.container-cards>.card:nth-child(3) {
+    animation-delay: 0.25s;
+}
+
+.imagen-libro {
+    animation-delay: 0.35s;
+}
+
+@media (min-width: 768px) {
+    .container-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro {
+        grid-column: span 2;
+    }
+}

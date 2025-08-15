@@ -1,50 +1,350 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SoftPro — Historia</title>
 
-  <!-- Fuente -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
-
-  <!-- Estilos globales -->
   <link rel="stylesheet" href="header.css">
-  <!-- Estilos de esta página -->
   <link rel="stylesheet" href="historia.css">
 </head>
 <body>
   <!-- Header -->
   <header class="header">
     <div class="menu container">
-      <img src="img/logo_VJ.png" class="logo" alt="Katronix Gaming"/>
-      <nav class="navbar" aria-label="Principal">
+      <img src="img/Logoo.png" class="logo" alt="SoftPro"/>
+      <nav class="navbar" aria-label="Navegación principal">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="juegos.html">Juegos</a></li>
-          <li><a href="CRUD.html">GameHub</a></li>
-          <li><a class="active" href="historia.html" aria-current="page">Historia</a></li>
+          <li class="dropdown">
+            <a href="#" class="menu-trigger">☰ Menú</a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">🏠 Inicio</a></li>
+<<<<<<< HEAD
+              <li><a href="carrusel.html">📗 Preguntas</a></li>
+            </ul>
+          </li>
+=======
+                            <li><a href="carrusel.html">📗 Preguntas</a></li>
+>>>>>>> c8a49f5b9c4b1b5c397066ebb75464e49e6d5472
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main" tabindex="-1">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero__wrap">
-        <h1 class="hero__title">Evolución de Ingeniería de Software y Eficiencia de Procesamiento</h1>
-        <p class="hero__subtitle">
-          De <span>batch processing</span> a <span>IA en tiempo real</span>:
-          cómo las mejoras en <strong>CPU</strong>, <strong>memoria</strong> y <strong>E/S</strong>
-          impulsaron nuevos <strong>paradigmas</strong>, <strong>arquitecturas</strong> y una HCI más natural.
-        </p>
-      </div>
-    </section>
+  <!-- Intro --> 
+  <section class="inicio">
+    <h1>Ingeniería de software y eficiencia de procesamiento en la historia</h1>
+  </section>
 
+  <!-- Resumen + chips -->    
 
-    </section>
-  </main>
+  <section class="container container-top">
+    <p class="lead">
+      De <strong>batch</strong> monousuario a plataformas <strong>distribuidas, paralelas e inteligentes</strong>.
+      Avances en <strong>CPU</strong>, <strong>memoria</strong> y <strong>E/S</strong> cambiaron paradigmas,
+      arquitecturas y la HCI.
+    </p>
+    <nav class="period-nav" aria-label="Periodos">
+      <a class="chip" href="#s-1940s">1940s–1960s</a>
+      <a class="chip" href="#s-1960s">1960s–1970s</a>
+      <a class="chip" href="#s-1980s">1980s</a>
+      <a class="chip" href="#s-1990s">1990s</a>
+      <a class="chip" href="#s-2000s">2000s</a>
+      <a class="chip" href="#s-2010s">2010s</a>
+      <a class="chip" href="#s-2020s">2020s–hoy</a>
+    </nav>
+  </section>
 
-  <footer class="footer">
-    <p>© 2025 SoftPro • Powered by SKVJ</p>
-  </footer>
+  <!-- ===== Timeline HORIZONTAL ===== -->
+  <section class="hwrap" aria-label="Línea de tiempo horizontal">
+    <div class="progress"><div class="progress__bar" id="progressBar"></div></div>
+
+    <div class="htrack" id="track">
+      <!-- 1940s–1960s -->
+      <article id="s-1940s" class="slide">
+        <span class="dot" aria-hidden="true"></span>
+        <div class="card card1 preview">
+          <header class="head">
+            <span class="badge">1940s–1960s</span>
+            <h2>Batch</h2>
+            <div class="head-actions"><button class="btn open-modal" data-index="0">Ampliar</button></div>
+          </header>
+          <figure class="media media--thumb">
+            <img src="img/historia/1940s-valvulas-transistores-batch.jpg"
+                 alt="Computadoras de válvulas y transistores; procesamiento por lotes">
+          </figure>
+        </div>
+        <template class="detail">
+          <img src="img/historia/1940s-valvulas-transistores-batch.jpg"
+               alt="Computadoras de válvulas y transistores; procesamiento por lotes">
+          <div class="block"><div class="pill">Hito tecnológico</div><p>Válvulas → transistores; procesamiento por lotes.</p></div>
+          <div class="block"><div class="pill">Ing. de Software</div><p>Machine code/ensamblador; optimización manual extrema.</p></div>
+          <div class="block"><div class="pill">HCI</div><p>Tarjetas perforadas; latencias de horas.</p></div>
+        </template>
+      </article>
+
+      <!-- 1960s–1970s -->
+      <article id="s-1960s" class="slide">
+        <span class="dot" aria-hidden="true"></span>
+        <div class="card card2 preview">
+          <header class="head">
+            <span class="badge">1960s–1970s</span>
+            <h2>Mainframes · </h2>
+            <div class="head-actions"><button class="btn open-modal" data-index="1">Ampliar</button></div>
+          </header>
+          <figure class="media media--thumb">
+            <img src="img/historia/1960s-mainframe-time-sharing.jpeg" alt="Mainframes con tiempo compartido">
+          </figure>
+        </div>
+        <template class="detail">
+          <img src="img/historia/1960s-mainframe-time-sharing.jpeg" alt="Mainframes con tiempo compartido">
+          <div class="block"><div class="pill">Hito tecnológico</div><p>Mainframes con <em>time-sharing</em>.</p></div>
+          <div class="block"><div class="pill">Ing. de Software</div><p>FORTRAN/COBOL; multiprogramación y <em>round-robin</em>.</p></div>
+          <div class="block"><div class="pill">HCI</div><p>Terminales de texto; multiusuario casi en tiempo real.</p></div>
+        </template>
+      </article>
+
+      <!-- 1980s -->
+      <article id="s-1980s" class="slide">
+        <span class="dot" aria-hidden="true"></span>
+        <div class="card card3 preview">
+          <header class="head">
+            <span class="badge">1980s</span>
+            <h2>PC · Primeras GUI</h2>
+            <div class="head-actions"><button class="btn open-modal" data-index="2">Ampliar</button></div>
+          </header>
+          <figure class="media media--thumb">
+            <img src="img/historia/1980s-pc-gui.jpg" alt="PCs y primeras interfaces gráficas">
+          </figure>
+        </div>
+        <template class="detail">
+          <img src="img/historia/1980s-pc-gui.jpg" alt="PCs y primeras interfaces gráficas">
+          <div class="block"><div class="pill">Hito tecnológico</div><p>Microcomputadoras; primeras GUI.</p></div>
+          <div class="block"><div class="pill">Ing. de Software</div><p>Orientación a eventos; toolkits de UI; compiladores mejores.</p></div>
+          <div class="block"><div class="pill">HCI</div><p>Mouse, iconos y ventanas; gran salto en usabilidad.</p></div>
+        </template>
+      </article>
+
+      <!-- 1990s -->
+      <article id="s-1990s" class="slide">
+        <span class="dot" aria-hidden="true"></span>
+        <div class="card card4 preview">
+          <header class="head">
+            <span class="badge">1990s</span>
+            <h2>Red · Web · Multimedia</h2>
+            <div class="head-actions"><button class="btn open-modal" data-index="3">Ampliar</button></div>
+          </header>
+          <figure class="media media--thumb">
+            <img src="img/historia/1990s-network-web-multimedia.jpg"
+                 alt="Sistemas en red, web pública y multimedia">
+          </figure>
+        </div>
+        <template class="detail">
+          <img src="img/historia/1990s-network-web-multimedia.jpg"
+               alt="Sistemas en red, web pública y multimedia">
+          <div class="block"><div class="pill">Hito tecnológico</div><p>Conectividad, web pública y multimedia.</p></div>
+          <div class="block"><div class="pill">Ing. de Software</div><p>Cliente–servidor, multithreading; optimización de códecs.</p></div>
+          <div class="block"><div class="pill">HCI</div><p>Interfaces más ricas y dinámicas; nace la web.</p></div>
+        </template>
+      </article>
+
+      <!-- 2000s -->
+      <article id="s-2000s" class="slide">
+        <span class="dot" aria-hidden="true"></span>
+        <div class="card card5 preview">
+          <header class="head">
+            <span class="badge">2000s</span>
+            <h2>Móvil · Bajo consumo</h2>
+            <div class="head-actions"><button class="btn open-modal" data-index="4">Ampliar</button></div>
+          </header>
+          <figure class="media media--thumb">
+            <img src="img/historia/2000s-mobile-lowpower.jpg"
+                 alt="Smartphones y procesadores de bajo consumo">
+          </figure>
+        </div>
+        <template class="detail">
+          <img src="img/historia/2000s-mobile-lowpower.jpg"
+               alt="Smartphones y procesadores de bajo consumo">
+          <div class="block"><div class="pill">Hito tecnológico</div><p>Dispositivos móviles y procesadores low-power.</p></div>
+          <div class="block"><div class="pill">Ing. de Software</div><p>Optimización energética; <em>async I/O</em> y patrones reactivos.</p></div>
+          <div class="block"><div class="pill">HCI</div><p>Táctil y diseño responsivo; experiencia móvil.</p></div>
+        </template>
+      </article>
+
+      <!-- 2010s -->
+      <article id="s-2010s" class="slide">
+        <span class="dot" aria-hidden="true"></span>
+        <div class="card card6 preview">
+          <header class="head">
+            <span class="badge">2010s</span>
+            <h2>Multinúcleo · </h2>
+            <div class="head-actions"><button class="btn open-modal" data-index="5">Ampliar</button></div>
+          </header>
+          <figure class="media media--thumb">
+            <img src="img/historia/2010s-multicore-parallel.jpg" alt="CPU multinúcleo y GPGPU">
+          </figure>
+        </div>
+        <template class="detail">
+          <img src="img/historia/2010s-multicore-parallel.jpg" alt="CPU multinúcleo y GPGPU">
+          <div class="block"><div class="pill">Hito tecnológico</div><p>CPU multinúcleo y GPGPU; paralelismo generalizado.</p></div>
+          <div class="block"><div class="pill">Ing. de Software</div><p>Concurrencia, microservicios; escalabilidad.</p></div>
+          <div class="block"><div class="pill">HCI</div><p>UIs más fluidas; datos en tiempo real.</p></div>
+        </template>
+      </article>
+
+      <!-- 2020s–hoy -->
+      <article id="s-2020s" class="slide">
+        <span class="dot" aria-hidden="true"></span>
+        <div class="card card7 preview">
+          <header class="head">
+            <span class="badge">2020s–hoy</span>
+            <h2>IA ·  · Edge</h2>
+            <div class="head-actions"><button class="btn open-modal" data-index="6">Ampliar</button></div>
+          </header>
+          <figure class="media media--thumb">
+            <img src="img/historia/2020s-ai-edge-xr.jpg" alt="IA integrada, edge computing y XR">
+          </figure>
+        </div>
+        <template class="detail">
+          <img src="img/historia/2020s-ai-edge-xr.jpg" alt="IA integrada, edge computing y XR">
+          <div class="block"><div class="pill">Hito tecnológico</div><p>Integración de IA, edge computing y XR.</p></div>
+          <div class="block"><div class="pill">Ing. de Software</div><p>MLOps; inferencia en tiempo real; optimización híbrida.</p></div>
+          <div class="block"><div class="pill">HCI</div><p>Voz, visión y gestos; experiencias inmersivas.</p></div>
+        </template>
+      </article>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" hidden></div>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" hidden>
+    <button class="modal__close" id="modalClose" aria-label="Cerrar">×</button>
+    <button class="modal__nav prev" id="modalPrev" aria-label="Anterior">◀</button>
+    <button class="modal__nav next" id="modalNext" aria-label="Siguiente">▶</button>
+    <div class="modal__content" id="modalContent"></div>
+  </div>
+
+  <footer><p>© 2025 SoftPro • Powered by SKVJ</p></footer>
+
+  <!-- ===== JS incrustado ===== -->
+  <script>
+  (() => {
+    const $  = (s, r=document) => r.querySelector(s);
+    const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+
+    const track  = $('#track');
+    const slides = $$('.slide');
+    const chips  = $$('.period-nav .chip');
+    const bar    = $('#progressBar');
+
+    /* Alturas y top safe bajo header */
+    function fit(){
+      const Hh=$('.header')?.offsetHeight||0, Ih=$('.inicio')?.offsetHeight||0, Mh=$('.container-top')?.offsetHeight||0;
+      const avail=Math.max(340, window.innerHeight-(Hh+Ih+Mh)-24);
+      const h=Math.max(320, Math.min(460, avail));
+      document.documentElement.style.setProperty('--slide-h', h+'px');
+      document.documentElement.style.setProperty('--axisY', (h*0.54)+'px');
+      document.documentElement.style.setProperty('--progress-top', (Hh+8)+'px');
+    }
+    window.addEventListener('load', fit);
+    window.addEventListener('resize', fit);
+
+    /* Chips (años) -> scroll suave */
+    function go(id){ document.getElementById(id)?.scrollIntoView({behavior:'smooth', inline:'center', block:'nearest'}); }
+    chips.forEach(c=>c.addEventListener('click', e=>{ e.preventDefault(); go(c.getAttribute('href').slice(1)); }));
+
+    /* Chip activo + progreso */
+    function onScroll(){
+      const tr=track.getBoundingClientRect(), cx=tr.left+tr.width/2;
+      let near=null,best=1e9;
+      slides.forEach(s=>{ const r=s.getBoundingClientRect(), d=Math.abs(cx-(r.left+r.width/2)); if(d<best){best=d; near=s;}});
+      if(near){ const id=near.id; chips.forEach(c=>c.classList.toggle('active', c.getAttribute('href').slice(1)===id)); }
+      const max=track.scrollWidth-track.clientWidth; bar.style.width=(max>0?(track.scrollLeft/max)*100:0)+'%';
+    }
+    track.addEventListener('scroll', ()=>requestAnimationFrame(onScroll));
+    window.addEventListener('resize', onScroll);
+    onScroll();
+
+    /* ---------- Modal ---------- */
+    const modal=$('#modal'), backdrop=$('#modalBackdrop'), content=$('#modalContent');
+    const closeBtn=$('#modalClose'), prevBtn=$('#modalPrev'), nextBtn=$('#modalNext');
+    let current=-1, lastFocus=null;
+
+    function addImageFallback(img){
+      const tries = new Set([img.src]);
+      if (img.src.endsWith('.jpg'))  tries.add(img.src.replace('.jpg','.jpeg'));
+      if (img.src.endsWith('.jpeg')) tries.add(img.src.replace('.jpeg','.jpg'));
+      if (img.src.includes('/img/')) tries.add(img.src.replace('/img/','/../img/'));
+      const arr=[...tries]; let i=1;
+      img.addEventListener('error', ()=>{ if(i<arr.length) img.src = arr[i++]; });
+    }
+
+    function buildExpanded(slide){
+      const period = slide.querySelector('.badge').textContent;
+      const title  = slide.querySelector('h2').textContent;
+      const tpl    = slide.querySelector('template.detail').content.cloneNode(true);
+
+      const img    = tpl.querySelector('img');
+      const blocks = tpl.querySelectorAll('.block');
+
+      const wrapper = document.createElement('div');
+      wrapper.innerHTML = `
+        <div class="head modal-head">
+          <span class="badge">${period}</span>
+          <h2>${title}</h2>
+        </div>
+        <div class="modal__grid">
+          <div class="modal__media"></div>
+          <div class="modal__text"></div>
+        </div>
+      `;
+      wrapper.querySelector('.modal__media').appendChild(img);
+      const text = wrapper.querySelector('.modal__text');
+      blocks.forEach(b=>text.appendChild(b));
+
+      addImageFallback(img);
+      return wrapper;
+    }
+
+    function openByIndex(i){
+      if(i<0) i=slides.length-1;
+      if(i>=slides.length) i=0;
+      current=i;
+      content.innerHTML='';
+      content.appendChild(buildExpanded(slides[i]));
+      lastFocus=document.activeElement;
+      backdrop.hidden=false; modal.hidden=false;
+      void modal.offsetHeight; void backdrop.offsetHeight;
+      modal.classList.add('open'); backdrop.classList.add('open');
+      document.body.style.overflow='hidden';
+      closeBtn.focus();
+    }
+
+    function closeModal(){
+      modal.classList.remove('open'); backdrop.classList.remove('open');
+      setTimeout(()=>{ modal.hidden=true; backdrop.hidden=true; document.body.style.overflow=''; if(lastFocus) lastFocus.focus(); },200);
+    }
+
+    $$('.open-modal').forEach(b=>b.addEventListener('click', e=>{
+      e.preventDefault(); openByIndex(parseInt(b.dataset.index,10));
+    }));
+
+    prevBtn.addEventListener('click', ()=> openByIndex(current-1));
+    nextBtn.addEventListener('click', ()=> openByIndex(current+1));
+
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+    document.addEventListener('keydown', e=>{
+      if(modal.hidden) return;
+      if(e.key==='Escape') closeModal();
+      if(e.key==='ArrowLeft')  openByIndex(current-1);
+      if(e.key==='ArrowRight') openByIndex(current+1);
+    });
+
+    /* Fallback también para las imágenes de las previews */
+    $$('img').forEach(addImageFallback);
+  })();
+  </script>
 </body>
 </html>
