@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" contenido="width=device-width, initial-scale=1.0"/>
-  <title>SoftPro — Historia</title>
 
-  <!-- Tipografías -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <!-- Fuente -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet"/>
 
-  <!-- Estilos generales existentes -->
+  <!-- Estilos globales -->
   <link rel="stylesheet" href="header.css">
   <!-- Estilos de esta página -->
   <link rel="stylesheet" href="historia.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="header">
     <div class="menu container">
       <img src="img/logo_VJ.png" class="logo" alt="Katronix Gaming"/>
@@ -28,153 +26,25 @@
     </div>
   </header>
 
-  <main id="main" class="main" tabindex="-1">
+  <main id="main" tabindex="-1">
     <!-- Hero -->
     <section class="hero">
       <div class="hero__wrap">
-        <h1 class="hero__title">Historia de la Ingeniería de Sistemas</h1>
+        <h1 class="hero__title">Evolución de Ingeniería de Software y Eficiencia de Procesamiento</h1>
         <p class="hero__subtitle">
           De <span>batch processing</span> a <span>IA en tiempo real</span>:
-          hitos que cambiaron la <strong>ingeniería de software</strong>, la
-          <strong>eficiencia de procesamiento</strong> y la <strong>HCI</strong>.
+          cómo las mejoras en <strong>CPU</strong>, <strong>memoria</strong> y <strong>E/S</strong>
+          impulsaron nuevos <strong>paradigmas</strong>, <strong>arquitecturas</strong> y una HCI más natural.
         </p>
       </div>
     </section>
 
-    <!-- Timeline -->
-    <section class="timeline" aria-label="Línea de tiempo de la evolución tecnológica">
-      <!-- 1940s–1960s -->
-      <article class="t-card reveal" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">1940s–1960s</span>
-          <h2 class="t-title">Válvulas → Transistores · Batch Processing</h2>
-        </div>
-        <div class="t-contenido">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>Computadoras de válvulas y luego transistores; procesamiento por lotes.</p>
 
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Programación en código máquina y ensamblador; optimización extrema por limitaciones.</p>
-
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Interacción indirecta con tarjetas perforadas; tiempos de respuesta de horas.</p>
-        </div>
-      </article>
-
-      <!-- 1960s–1970s -->
-      <article class="t-card reveal" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">1960s–1970s</span>
-          <h2 class="t-title">Mainframes · Time‑Sharing</h2>
-        </div>
-        <div class="t-contenido">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>Mainframes con sistemas de tiempo compartido.</p>
-
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Lenguajes de alto nivel (FORTRAN, COBOL); gestión eficiente de CPU compartida.</p>
-
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Terminales de texto; interacción multiusuario más inmediata.</p>
-        </div>
-      </article>
-
-      <!-- 1980s -->
-      <article class="t-card reveal" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">1980s</span>
-          <h2 class="t-title">Microcomputadoras · Primeras GUI</h2>
-        </div>
-        <div class="t-contenido">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>PCs, aceleración gráfica inicial, sistemas de ventanas.</p>
-
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Paradigma orientado a eventos; optimización para gráficos y nuevos dispositivos de entrada.</p>
-
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Mouse, íconos y ventanas; salto drástico en usabilidad.</p>
-        </div>
-      </article>
-
-      <!-- 1990s -->
-      <article class="t-card reveal" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">1990s</span>
-          <h2 class="t-title">Redes · Multimedia · Multitarea</h2>
-        </div>
-        <div class="t-contenido">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>Sistemas conectados, multimedia, Internet pública.</p>
-
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Multithreading, cliente–servidor; optimización para audio y video.</p>
-
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Interfaces más ricas y dinámicas; nace la web.</p>
-        </div>
-      </article>
-
-      <!-- 2000s -->
-      <article class="t-card reveal" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">2000s</span>
-          <h2 class="t-title">Móviles · Bajo Consumo</h2>
-        </div>
-        <div class="t-contenido">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>Smartphones y procesadores low‑power.</p>
-
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Optimización energética; E/S asíncrona; apps nativas y móviles.</p>
-
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Interfaces táctiles y adaptativas; experiencia móvil centrada en el usuario.</p>
-        </div>
-      </article>
-
-      <!-- 2010s -->
-      <article class="t-card reveal" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">2010s</span>
-          <h2 class="t-title">Multinúcleo · Paralelismo</h2>
-        </div>
-        <div class="t-contenido">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>CPU multinúcleo y GPGPU; cómputo paralelo generalizado.</p>
-
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Arquitecturas concurrentes; software escalable y distribuido.</p>
-
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Mayor fluidez multitarea; aplicaciones intensivas en datos.</p>
-        </div>
-      </article>
-
-      <!-- 2020s–Actualidad -->
-      <article class="t-card reveal" tabindex="0">
-        <div class="t-meta">
-          <span class="t-badge">2020s–Actualidad</span>
-          <h2 class="t-title">IA · Edge · XR</h2>
-        </div>
-        <div class="t-contenido">
-          <div class="t-chip">Hito tecnológico</div>
-          <p>Integración de IA, edge computing y realidad aumentada/mixta.</p>
-
-          <div class="t-chip">Impacto en Ing. de Software</div>
-          <p>Inferencia en tiempo real; optimización híbrida local–nube.</p>
-
-          <div class="t-chip">Impacto en HCI</div>
-          <p>Interacción por voz, visión y gestos; experiencias inmersivas.</p>
-        </div>
-      </article>
     </section>
   </main>
 
   <footer class="footer">
     <p>© 2025 SoftPro • Powered by SKVJ</p>
   </footer>
-
-  <script src="historia.js"></script>
 </body>
 </html>
