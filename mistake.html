@@ -1,0 +1,196 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contenido="width=device-width, initial-scale=1.0">
+    <title>SoftPro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="mistake.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <img src="img/Logoo.png" class="logo">
+            <nav class="navbar">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="menu-trigger">☰ Menú</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">🏠 Inicio</a></li>
+                            <li><a href="historia.html">📗 Historia</a></li>
+                            <li><a href="mistake.html">⚠️ Errores</a></li>
+                            <li><a href="desafios.html">📌 Desafios</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main-contenido container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <img src="img/Error.png" class="error">
+            <h1 class="text-4xl font-bold text-blue-100 mb-4">Errores Comunes en Sistemas</h1>
+            <p class="text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed">
+                Análisis de los aprendizajes y errores más frecuentes que presentan los usuarios en relación a los sistemas de ingeniería
+            </p>
+        </div>
+        <div class="rounded-xl p-8 mb-13">
+            <h2 class="text-2xl font-semibold text-blue-100 mb-4">Contexto del Problema</h2>
+            <p class="text-blue-200 text-lg leading-relaxed">
+                Los errores y dificultades de aprendizaje más comunes que presentan los usuarios son el resultado de un
+                <span class="text-blue-300 font-semibold">desajuste entre las capacidades cognitivas del ser humano</span>
+                y las características del sistema.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-gray-800/40 backdrop-blur-sm rounded-xl border border-gray-600/30 card-transition hover:border-gray-500/50 hover:shadow-xl hover:shadow-blue-900/20">
+                <input type="checkbox" id="toggle1" class="toggle-checkbox">
+                <div class="rounded-xl card-contenido p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-red-400" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-100">Brecha de Modelo Mental</h3>
+                        </div>
+                        <label for="toggle1" class="toggle-label"></label>
+                    </div>
+                    <p class="text-blue-200 text-lg mb-4">
+                        Desajuste entre las expectativas del usuario y la organización real del sistema.
+                    </p>
+                    <div class="expand-contenido">
+                        <div class="border-t border-blue-700/30 pt-4">
+                            <div class="bg-blue-900/30 rounded-lg p-4 mb-4">
+                                <h4 class="text-blue-100 font-semibold mb-2">📁 Ejemplo Práctico:</h4>
+                                <p class="text-blue-200">
+                                    El usuario busca una función de "guardar" en el menú "Archivo", porque es lo que su modelo mental le dice, 
+                                    pero el sistema tiene la función en un menú lateral de "Configuración". Esto lleva a perder tiempo,
+                                    ya que no sabrá cómo proceder.
+                                </p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4">
+                                <h4 class="text-red-300 font-semibold mb-2">⚠️ Consecuencias:</h4>
+                                <p class="text-blue-200">
+                                    El usuario debe desaprender su modelo mental previo y construir uno nuevo para tal sistema específico, 
+                                    esto generará una alta carga cognitiva. Por esta razón, utilizar un icono de engranaje para la 
+                                    configuración en una pantalla y un icono de llave para otra agrava este problema.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-blue-700/30 card-transition hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/20">
+                <input type="checkbox" id="toggle2" class="toggle-checkbox">
+                <div class="rounded-xl card-contenido p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-100">Carga Cognitiva Excesiva</h3>
+                        </div>
+                        <label for="toggle2" class="toggle-label"></label>
+                    </div>
+                    <p class="text-blue-200 text-lg mb-4">
+                        Sobrecarga de la memoria de trabajo del usuario con demasiada información simultánea.
+                    </p>
+                    <div class="expand-contenido">
+                        <div class="border-t border-blue-700/30 pt-4">
+                            <div class="bg-blue-900/30 rounded-lg p-4 mb-4">
+                                <h4 class="text-blue-100 font-semibold mb-2">🧠 Limitación Humana:</h4>
+                                <p class="text-blue-200">
+                                    La memoria de trabajo humana solo puede retener unos <span class="text-yellow-300 font-bold">7 elementos a la vez</span>.
+                                </p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4">
+                                <h4 class="text-red-300 font-semibold mb-2">⚠️ Problema:</h4>
+                                <p class="text-blue-200">
+                                    Se le pide al usuario que realice una tarea compleja que requiere múltiples pasos o valores de entrada.
+                                    El usuario podría olvidar los datos, lo que lleva a una mala validación de los datos y frustración
+                                    por parte del usuario.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-blue-700/30 card-transition hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/20">
+                <input type="checkbox" id="toggle3" class="toggle-checkbox">
+                <div class="rounded-xl card-contenido p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-100">Falta de Retroalimentación </h3>
+                        </div>
+                        <label for="toggle3" class="toggle-label"></label>
+                    </div>
+                    <p class="text-blue-200 text-lg mb-4">
+                        Ausencia de respuestas inmediatas y comprensibles del sistema hacia las acciones del usuario.
+                    </p>
+                    <div class="expand-contenido">
+                        <div class="border-t border-blue-700/30 pt-4">
+                            <div class="bg-red-900/20 rounded-lg p-4">
+                                <h4 class="text-red-300 font-semibold mb-2">⚠️ Consecuencias:</h4>
+                                <p class="text-blue-200">
+                                    Los sistemas que no proporcionan una retroalimentación inmediata y comprensible sobre las acciones 
+                                    del usuario generan incertidumbre. Los usuarios pueden repetir la acción varias veces o abandonar 
+                                    la tarea, creyendo que el sistema está roto o no responde.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-blue-700/30 card-transition hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/20">
+                <input type="checkbox" id="toggle4" class="toggle-checkbox">
+                <div class="rounded-xl card-contenido p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-blue-100">Falta de Capacitación</h3>
+                        </div>
+                        <label for="toggle4" class="toggle-label"></label>
+                    </div>
+                    <p class="text-blue-200 text-lg mb-4">
+                        Ausencia de documentación clara y capacitación adecuada para el uso del sistema.
+                    </p>
+                    <div class="expand-contenido">
+                        <div class="border-t border-blue-700/30 pt-4">
+                            <div class="bg-blue-900/30 rounded-lg p-4 mb-4">
+                                <h4 class="text-blue-100 font-semibold mb-2">🔍 Contexto:</h4>
+                                <p class="text-blue-200">
+                                    Aunque la ingeniería de sistemas se centra en la funcionalidad del sistema, la falta de una
+                                    documentación clara provoca errores por parte del usuario.
+                                </p>
+                            </div>
+                            <div class="bg-red-900/20 rounded-lg p-4">
+                                <h4 class="text-red-300 font-semibold mb-2">⚠️ Resultado:</h4>
+                                <p class="text-blue-200">
+                                    Los usuarios no saben cómo utilizar las funcionalidades avanzadas o incluso las básicas,
+                                    lo que lleva a un uso ineficiente y a la creencia de que el sistema es poco intuitivo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 SoftPro • Powered by SKVJ</p>
+    </footer>
+</body>
+</html>
