@@ -1,94 +1,317 @@
-/* ===== Base ===== */
-*{ box-sizing:border-box }
-html,body{ height:100% }
-html{ scroll-behavior:smooth }
-body{
-  margin:0; font-family:'Orbitron', sans-serif; color:#fff;
-  background:url('img/fondo4.avif') no-repeat center center fixed;
-  background-size:cover; background-color:#0004ff;
-  padding-top:120px;
-  opacity:0; transform:translateY(8px);
-  transition:opacity .6s ease, transform .6s ease;
-}
-body.page--in{ opacity:1; transform:none }
-.container{ max-width:1100px; margin:0 auto; padding:0 16px }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SoftPro — Comportamiento</title>
 
-/* ===== HERO ===== */
-.hero{
-  position:relative; height:min(48vh,420px);
-  display:grid; place-items:center; overflow:hidden;
-  border-radius:16px; margin:8px 16px;
-}
-.hero::before{
-  content:""; position:absolute; inset:0;
-  /* fallback CSS; si el JS pone fondo se apaga con .bg-ready */
-  background:
-    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25)),
-    url('./comportamiento/memoria.jpg') center/cover no-repeat;
-  transform:scale(1.06); filter:saturate(1.1);
-  animation:heroZoom 10s ease-in-out infinite alternate;
-}
-@keyframes heroZoom{ from{transform:scale(1.06)} to{transform:scale(1.12)} }
-.hero.bg-ready::before{ background:none !important; }
-.hero__content{ position:relative; z-index:1; text-align:center; padding:0 12px }
-.hero__content h1{
-  margin:0 0 8px; font-size:clamp(26px,4.5vw,44px);
-  text-shadow:0 0 10px #0004ff, 0 0 20px #1900ff;
-}
-.hero__content p{ margin:0; color:#dfe8ff }
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="comportamiento.css">
+</head>
+<body class="page">
+  <!-- Header -->
+  <header class="header">
+    <div class="menu container">
+      <img src="img/Logoo.png" class="logo" alt="SoftPro">
+      <nav class="navbar" aria-label="Navegación principal">
+        <ul>
+          <li class="dropdown">
+            <a href="#" class="menu-trigger">☰ Menú</a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html">🏠 Inicio</a></li>
+              <li><a href="carrusel.html">📗 Preguntas</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-/* ===== Titles ===== */
-.section-title{ text-align:center; margin:20px 0 10px; font-size:clamp(20px,3.2vw,28px) }
-.section-title span{ color:#a6d5ff }
+  <!-- HERO -->
+  <section class="hero" data-reveal>
+    <div class="hero__content">
+      <h1>Del uso pasivo a la interacción fluida</h1>
+      <p>La eficiencia de procesamiento y la ingeniería de software transformaron nuestro comportamiento.</p>
+    </div>
+  </section>
 
-/* ===== Reveal ===== */
-[data-reveal]{ opacity:0; transform:translateY(12px); transition:opacity .5s, transform .5s }
-[data-reveal].in{ opacity:1; transform:none }
+  <!-- GRID: Flip Cards Antes/Hoy -->
+  <section class="container">
+    <h2 class="section-title" data-reveal>Comportamiento: <span>Antes</span> / <span>Hoy</span></h2>
 
-/* ===== Flip cards ===== */
-.flip-grid{ display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)) }
-.flip-card{ perspective:1000px; outline:none }
-.flip-card__inner{ position:relative; width:100%; height:240px; transform-style:preserve-3d; transition:transform .5s ease }
-.flip-card.is-flipped .flip-card__inner{ transform:rotateY(180deg) }
-.flip-card__face{
-  position:absolute; inset:0; border-radius:16px; overflow:hidden;
-  display:grid; place-items:center; backface-visibility:hidden;
-  border:1px solid rgba(255,255,255,.22); box-shadow:0 8px 28px rgba(0,0,0,.18)
-}
-.face--back{ transform:rotateY(180deg) }
-.face__bg{
-  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:saturate(1.05);
-  opacity:0; transition: opacity .35s ease;
-}
-.face__bg.loaded{ opacity:1 }
-.face__bg.failed{ opacity:.25; filter:grayscale(.6) }
-.face__bg.pending{ opacity:.0 }
-.face__veil{ position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35)) }
-.face__content{ position:relative; z-index:1; text-align:center; padding:10px 12px; display:grid; gap:6px; place-items:center }
-.face__content h3{ margin:0; font-size:clamp(16px,2.4vw,20px) }
-.face__content p{ margin:0; color:#e7f0ff }
-.tag{ margin-top:4px; padding:6px 10px; border-radius:999px; font-size:12px; border:1px solid rgba(255,255,255,.28); background:linear-gradient(90deg,rgba(120,60,255,.22),rgba(0,120,255,.22)) }
-.tag--ok{ border-color:#7fffd4 } .tag--warn{ border-color:#ffd27f }
+    <div class="flip-grid">
+      <!-- 1 Rol del usuario -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <img class="face__bg" data-name="rol-antes" alt="Usuario pasivo">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Rol del usuario</h3>
+              <p>Pasivo · por lotes</p>
+              <span class="tag">Antes</span>
+            </div>
+          </div>
+          <div class="flip-card__face face--back">
+            <img class="face__bg" data-name="rol-hoy" alt="Usuario activo">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Rol del usuario</h3>
+              <p>Activo · personaliza · explora</p>
+              <span class="tag tag--ok">Hoy</span>
+            </div>
+          </div>
+        </div>
+      </article>
 
-/* ===== Impulsores ===== */
-.impulsors{ display:grid; gap:14px; margin:8px 0 22px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)) }
-.impulsor{
-  position:relative; display:block; border-radius:16px; overflow:hidden;
-  border:1px solid rgba(255,255,255,.22); transform:translateZ(0);
-  transition:transform .25s, box-shadow .25s, border-color .25s;
-  background:none; padding:0; cursor:pointer; color:inherit; font:inherit; text-align:left;
-}
-.impulsor img{
-  width:100%; height:180px; object-fit:cover; display:block; filter:saturate(1.05);
-  opacity:0; transition:opacity .35s ease;
-}
-.impulsor img.loaded{ opacity:1 } .impulsor img.failed{ opacity:.25; filter:grayscale(.6) }
-.impulsor span{ position:absolute; left:10px; bottom:10px; padding:6px 10px; border-radius:999px; font-size:12px; background:rgba(0,0,0,.45); border:1px solid rgba(255,255,255,.28) }
-.impulsor:hover, .impulsor:focus{ transform:translateY(-4px); border-color:#8ab6ff; box-shadow:0 12px 36px rgba(0,0,0,.28), 0 0 20px rgba(0,120,255,.25), 0 0 16px rgba(160,60,255,.18) }
+      <!-- 2 Tiempo de respuesta -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <img class="face__bg" data-name="tiempo-antes" alt="Latencias altas">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Tiempo de respuesta</h3>
+              <p>Minutos / horas</p>
+              <span class="tag">Antes</span>
+            </div>
+          </div>
+          <div class="flip-card__face face--back">
+            <img class="face__bg" data-name="tiempo-hoy" alt="Interacción inmediata">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Tiempo de respuesta</h3>
+              <p>Sub-segundo · tiempo real</p>
+              <span class="tag tag--ok">Hoy</span>
+            </div>
+          </div>
+        </div>
+      </article>
 
-/* ===== Hint & Footer ===== */
-.hint{ text-align:center; color:#bdd4ff; font-size:13px; margin:8px 0 2px }
-footer{ text-align:center; color:#dfe8ff; padding:24px 16px 40px }
-footer p{ margin:0 }
+      <!-- 3 Aprendizaje -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <img class="face__bg" data-name="aprendizaje-antes" alt="Aprendizaje formal">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Aprendizaje</h3>
+              <p>Manual · formación formal</p>
+              <span class="tag">Antes</span>
+            </div>
+          </div>
+          <div class="flip-card__face face--back">
+            <img class="face__bg" data-name="aprendizaje-hoy" alt="Onboarding y prueba-error">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Aprendizaje</h3>
+              <p>Onboarding · prueba/errores</p>
+              <span class="tag tag--ok">Hoy</span>
+            </div>
+          </div>
+        </div>
+      </article>
 
+      <!-- 4 Accesibilidad -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <img class="face__bg" data-name="accesibilidad-antes" alt="Acceso limitado">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Accesibilidad</h3>
+              <p>Nicho técnico</p>
+              <span class="tag">Antes</span>
+            </div>
+          </div>
+          <div class="flip-card__face face--back">
+            <img class="face__bg" data-name="accesibilidad-hoy" alt="Acceso amplio">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Accesibilidad</h3>
+              <p>Táctil · voz · lector pantalla</p>
+              <span class="tag tag--ok">Hoy</span>
+            </div>
+          </div>
+        </div>
+      </article>
 
+      <!-- 5 Modelo mental -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <!-- tu archivo real es con N: conprension-antes.png -->
+            <img class="face__bg" data-name="conprension-antes" alt="Modelo sencillo">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Modelo mental</h3>
+              <p>Tareas acotadas</p>
+              <span class="tag">Antes</span>
+            </div>
+          </div>
+          <div class="flip-card__face face--back">
+            <!-- y aquí es comprension-hoy.png -->
+            <img class="face__bg" data-name="comprension-hoy" alt="Caja negra">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Modelo mental</h3>
+              <p>Automatización · “caja negra”</p>
+              <span class="tag tag--warn">Hoy</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 Privacidad/confianza -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <img class="face__bg" data-name="privacidad-antes" alt="Datos locales">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Confianza y privacidad</h3>
+              <p>Datos locales</p>
+              <span class="tag">Antes</span>
+            </div>
+          </div>
+          <div class="flip-card__face face--back">
+            <img class="face__bg" data-name="privacidad-hoy" alt="Datos en nube/edge">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Confianza y privacidad</h3>
+              <p>Nube/edge · control</p>
+              <span class="tag tag--warn">Hoy</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="hint" data-reveal>Toca o presiona Enter para voltear cada tarjeta.</p>
+  </section>
+
+  <!-- Impulsores -->
+  <section class="container">
+    <h2 class="section-title" data-reveal>Impulsores técnicos</h2>
+    <div class="impulsors" data-reveal>
+      <button class="impulsor" type="button">
+        <img data-name="cpu" alt="CPU y paralelismo">
+        <span>CPU · Paralelismo</span>
+      </button>
+      <button class="impulsor" type="button">
+        <img data-name="memoria" alt="Memoria y caché">
+        <span>Memoria · Caché</span>
+      </button>
+      <button class="impulsor" type="button">
+        <img data-name="io-red" alt="E/S y red">
+        <span>E/S · Red</span>
+      </button>
+      <button class="impulsor" type="button">
+        <!-- usa memoria como placeholder de arquitectura si no tienes imagen -->
+        <img data-name="arquitectura" alt="Arquitecturas">
+        <span>Arquitecturas</span>
+      </button>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 SoftPro • Powered by SKVJ</p>
+  </footer>
+
+  <!-- Interacciones básicas -->
+  <script>
+    // Fade-in de página
+    window.addEventListener('load', () => document.body.classList.add('page--in'));
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{threshold:.15});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+
+    // Flip cards con click o Enter/Espacio
+    document.querySelectorAll('.flip-card').forEach(card=>{
+      const toggle = ()=>card.classList.toggle('is-flipped');
+      card.addEventListener('click', toggle);
+      card.addEventListener('keydown', e=>{
+        if(e.key==='Enter' || e.key===' '){ e.preventDefault(); toggle(); }
+      });
+    });
+  </script>
+
+  <!-- ========= SUPER-RESOLVER: carga imágenes por nombre, probando rutas/extensiones ========= -->
+  <script>
+  (function () {
+    const dirs = [
+      './comportamiento/','comportamiento/',
+      './img/comportamiento/','img/comportamiento/',
+      '/Page-IHM/comportamiento/','/Page-IHM/img/comportamiento/'
+    ];
+    const exts = ['.jpg','.jpeg','.png','.webp'];
+
+    // nombre alterno por el typo comprension/conprension y por "arquitectura"
+    function altNames(name){
+      const list = [name];
+      if (/comprension/i.test(name)) list.push(name.replace(/comprension/i,'conprension'));
+      if (/conprension/i.test(name)) list.push(name.replace(/conprension/i,'comprension'));
+      if (/arquitectura/i.test(name)) list.push('memoria'); // fallback visible
+      return [...new Set(list)];
+    }
+
+    function tryLoad(url){
+      return new Promise((resolve,reject)=>{
+        const img=new Image();
+        img.onload=()=>resolve(url);
+        img.onerror=reject;
+        img.src=url+(url.includes('?')?'':`?v=${Date.now()}`); // anti-cache 404
+      });
+    }
+
+    async function resolveUrl(base){
+      for (const name of altNames(base)){
+        for (const d of dirs){
+          for (const e of exts){
+            const u = d + name + e;
+            try { return await tryLoad(u); } catch {}
+          }
+        }
+      }
+      throw new Error('sin coincidencias: '+base);
+    }
+
+    // Carga todas las imágenes que tienen data-name
+    const targets = document.querySelectorAll('img[data-name]');
+    targets.forEach(async (img)=>{
+      const base = img.getAttribute('data-name');
+      img.classList.add('pending');
+      try{
+        const good = await resolveUrl(base);
+        img.onload = ()=> img.classList.add('loaded');
+        img.src = good;
+      }catch(err){
+        console.warn('[IMG] no encontrada:', base);
+        img.classList.add('failed');
+      }
+    });
+
+    // Hero: si el CSS no alcanza/rompe, forzamos fondo
+    (async ()=>{
+      const hero = document.querySelector('.hero');
+      if(!hero) return;
+      const order = ['hero','memoria','cpu','io-red'];
+      for (const n of order){
+        try{
+          const good = await resolveUrl(n);
+          hero.style.background = `linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25)), url('${good}') center/cover no-repeat`;
+          hero.classList.add('bg-ready');
+          break;
+        }catch{}
+      }
+    })();
+  })();
+  </script>
+</body>
+</html>
