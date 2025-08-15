@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SoftPro — Comportamiento de las personas</title>
+  <title>SoftPro — Comportamiento</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="comportamiento.css">
 </head>
-<body>
+<body class="page">
   <!-- Header -->
   <header class="header">
     <div class="menu container">
@@ -28,206 +28,290 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1>¿Cómo cambió el comportamiento de las personas?</h1>
-    <p class="tagline">
-      Ingeniería de <strong>software</strong> + <strong>eficiencia de procesamiento</strong> ⇒
-      usuarios más <em>activos</em>, <em>exigentes</em> y <em>diversos</em>.
-    </p>
-  </section>
-
-  <!-- Resumen -->
-  <section class="container">
-    <div class="glass lead">
-      <p>
-        A medida que mejoraron la <strong>CPU</strong>, la <strong>memoria</strong> y la <strong>E/S</strong>,
-        el software respondió mejor y el rol de las personas cambió: de usuarios pasivos que esperaban resultados,
-        a usuarios que <strong>prueban, exploran y exigen</strong> rapidez, facilidad y personalización.
-        Esto aumentó la <strong>accesibilidad</strong>, pero también la <strong>dependencia</strong> y la
-        <strong>opacidad</strong> de los sistemas (HCI, cap. 2).
-      </p>
+  <!-- HERO -->
+  <section class="hero" data-reveal>
+    <div class="hero__content">
+      <h1>Del uso pasivo a la interacción fluida</h1>
+      <p>La eficiencia de procesamiento y la ingeniería de software transformaron nuestro comportamiento.</p>
     </div>
   </section>
 
-  <!-- Flip cards: Antes / Hoy -->
+  <!-- GRID: Flip Cards Antes/Hoy -->
   <section class="container">
-    <h2 class="section-title">De <span>Antes</span> → <span>Hoy</span></h2>
-    <div class="grid flip-grid">
-      <!-- 1 -->
-      <article class="card flip" tabindex="0">
-        <div class="card__inner">
-          <div class="card__face card__face--front">
-            <h3>Rol del usuario</h3>
-            <p>Pasivo; sigue instrucciones y espera el resultado por lotes.</p>
-            <div class="pill">Antes</div>
+    <h2 class="section-title" data-reveal>Comportamiento: <span>Antes</span> / <span>Hoy</span></h2>
+
+    <div class="flip-grid">
+      <!-- 1 Rol del usuario -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <img class="face__bg" data-name="rol-antes" alt="Usuario pasivo">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Rol del usuario</h3>
+              <p>Pasivo · por lotes</p>
+              <span class="tag">Antes</span>
+            </div>
           </div>
-          <div class="card__face card__face--back">
-            <h3>Rol del usuario</h3>
-            <p>Activo; explora, compara, personaliza y espera feedback inmediato.</p>
-            <div class="pill pill--ok">Hoy</div>
-          </div>
-        </div>
-      </article>
-      <!-- 2 -->
-      <article class="card flip" tabindex="0">
-        <div class="card__inner">
-          <div class="card__face card__face--front">
-            <h3>Expectativa de tiempo</h3>
-            <p>Latencias de minutos/horas; interacción diferida.</p>
-            <div class="pill">Antes</div>
-          </div>
-          <div class="card__face card__face--back">
-            <h3>Expectativa de tiempo</h3>
-            <p><strong>Sub-segundo</strong>; realtime en apps, streaming y colaboración.</p>
-            <div class="pill pill--ok">Hoy</div>
+          <div class="flip-card__face face--back">
+            <img class="face__bg" data-name="rol-hoy" alt="Usuario activo">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Rol del usuario</h3>
+              <p>Activo · personaliza · explora</p>
+              <span class="tag tag--ok">Hoy</span>
+            </div>
           </div>
         </div>
       </article>
-      <!-- 3 -->
-      <article class="card flip" tabindex="0">
-        <div class="card__inner">
-          <div class="card__face card__face--front">
-            <h3>Aprendizaje</h3>
-            <p>Manual y formación formal; altas barreras de entrada.</p>
-            <div class="pill">Antes</div>
+
+      <!-- 2 Tiempo de respuesta -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <img class="face__bg" data-name="tiempo-antes" alt="Latencias altas">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Tiempo de respuesta</h3>
+              <p>Minutos / horas</p>
+              <span class="tag">Antes</span>
+            </div>
           </div>
-          <div class="card__face card__face--back">
-            <h3>Aprendizaje</h3>
-            <p>Onboarding, patrones conocidos y prueba/error segura.</p>
-            <div class="pill pill--ok">Hoy</div>
-          </div>
-        </div>
-      </article>
-      <!-- 4 -->
-      <article class="card flip" tabindex="0">
-        <div class="card__inner">
-          <div class="card__face card__face--front">
-            <h3>Accesibilidad</h3>
-            <p>Nicho técnico; pocos dispositivos de entrada.</p>
-            <div class="pill">Antes</div>
-          </div>
-          <div class="card__face card__face--back">
-            <h3>Accesibilidad</h3>
-            <p>Táctil, voz, lectores de pantalla, IA asistiva y diseño inclusivo.</p>
-            <div class="pill pill--ok">Hoy</div>
+          <div class="flip-card__face face--back">
+            <img class="face__bg" data-name="tiempo-hoy" alt="Interacción inmediata">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Tiempo de respuesta</h3>
+              <p>Sub-segundo · tiempo real</p>
+              <span class="tag tag--ok">Hoy</span>
+            </div>
           </div>
         </div>
       </article>
-      <!-- 5 -->
-      <article class="card flip" tabindex="0">
-        <div class="card__inner">
-          <div class="card__face card__face--front">
-            <h3>Comprensión del sistema</h3>
-            <p>Modelo mental sencillo; tareas acotadas.</p>
-            <div class="pill">Antes</div>
+
+      <!-- 3 Aprendizaje -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <img class="face__bg" data-name="aprendizaje-antes" alt="Aprendizaje formal">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Aprendizaje</h3>
+              <p>Manual · formación formal</p>
+              <span class="tag">Antes</span>
+            </div>
           </div>
-          <div class="card__face card__face--back">
-            <h3>Comprensión del sistema</h3>
-            <p>Automatización e IA: más productividad pero mayor <em>caja negra</em>.</p>
-            <div class="pill pill--warn">Hoy</div>
+          <div class="flip-card__face face--back">
+            <img class="face__bg" data-name="aprendizaje-hoy" alt="Onboarding y prueba-error">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Aprendizaje</h3>
+              <p>Onboarding · prueba/errores</p>
+              <span class="tag tag--ok">Hoy</span>
+            </div>
           </div>
         </div>
       </article>
-      <!-- 6 -->
-      <article class="card flip" tabindex="0">
-        <div class="card__inner">
-          <div class="card__face card__face--front">
-            <h3>Confianza & privacidad</h3>
-            <p>Datos locales; riesgos acotados.</p>
-            <div class="pill">Antes</div>
+
+      <!-- 4 Accesibilidad -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <img class="face__bg" data-name="accesibilidad-antes" alt="Acceso limitado">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Accesibilidad</h3>
+              <p>Nicho técnico</p>
+              <span class="tag">Antes</span>
+            </div>
           </div>
-          <div class="card__face card__face--back">
-            <h3>Confianza & privacidad</h3>
-            <p>Nube/Edge; consentimiento claro y control de datos esperado.</p>
-            <div class="pill pill--warn">Hoy</div>
+          <div class="flip-card__face face--back">
+            <img class="face__bg" data-name="accesibilidad-hoy" alt="Acceso amplio">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Accesibilidad</h3>
+              <p>Táctil · voz · lector pantalla</p>
+              <span class="tag tag--ok">Hoy</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 Modelo mental -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <!-- tu archivo real es con N: conprension-antes.png -->
+            <img class="face__bg" data-name="conprension-antes" alt="Modelo sencillo">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Modelo mental</h3>
+              <p>Tareas acotadas</p>
+              <span class="tag">Antes</span>
+            </div>
+          </div>
+          <div class="flip-card__face face--back">
+            <!-- y aquí es comprension-hoy.png -->
+            <img class="face__bg" data-name="comprension-hoy" alt="Caja negra">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Modelo mental</h3>
+              <p>Automatización · “caja negra”</p>
+              <span class="tag tag--warn">Hoy</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 Privacidad/confianza -->
+      <article class="flip-card" tabindex="0" data-reveal>
+        <div class="flip-card__inner">
+          <div class="flip-card__face">
+            <img class="face__bg" data-name="privacidad-antes" alt="Datos locales">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Confianza y privacidad</h3>
+              <p>Datos locales</p>
+              <span class="tag">Antes</span>
+            </div>
+          </div>
+          <div class="flip-card__face face--back">
+            <img class="face__bg" data-name="privacidad-hoy" alt="Datos en nube/edge">
+            <div class="face__veil"></div>
+            <div class="face__content">
+              <h3>Confianza y privacidad</h3>
+              <p>Nube/edge · control</p>
+              <span class="tag tag--warn">Hoy</span>
+            </div>
           </div>
         </div>
       </article>
     </div>
-    <p class="hint">Tip: toca o presiona Enter sobre una tarjeta para ver <em>Antes/Hoy</em> 😊</p>
+
+    <p class="hint" data-reveal>Toca o presiona Enter para voltear cada tarjeta.</p>
   </section>
 
-  <!-- Impulsores técnicos -->
+  <!-- Impulsores -->
   <section class="container">
-    <h2 class="section-title">¿Qué lo impulsó?</h2>
-    <div class="grid chips">
-      <div class="chip-card">
-        <span class="icon">🧠</span>
-        <h4>CPU & paralelismo</h4>
-        <p>Multinúcleo, vectorización y GPGPU permiten feedback fluido.</p>
-      </div>
-      <div class="chip-card">
-        <span class="icon">💾</span>
-        <h4>Memoria & caché</h4>
-        <p>Latencias reducidas, precarga y cacheo para UIs reactivas.</p>
-      </div>
-      <div class="chip-card">
-        <span class="icon">🔌</span>
-        <h4>E/S & red</h4>
-        <p>SSD, I/O asíncrona y redes rápidas habilitan tiempo real.</p>
-      </div>
-      <div class="chip-card">
-        <span class="icon">🧩</span>
-        <h4>Arquitecturas</h4>
-        <p>Microservicios, edge y nube híbrida acercan cómputo al usuario.</p>
-      </div>
-      <div class="chip-card">
-        <span class="icon">🧪</span>
-        <h4>Ingeniería de software</h4>
-        <p>Observabilidad, pruebas A/B, perf. budgets y diseño centrado en las personas.</p>
-      </div>
+    <h2 class="section-title" data-reveal>Impulsores técnicos</h2>
+    <div class="impulsors" data-reveal>
+      <button class="impulsor" type="button">
+        <img data-name="cpu" alt="CPU y paralelismo">
+        <span>CPU · Paralelismo</span>
+      </button>
+      <button class="impulsor" type="button">
+        <img data-name="memoria" alt="Memoria y caché">
+        <span>Memoria · Caché</span>
+      </button>
+      <button class="impulsor" type="button">
+        <img data-name="io-red" alt="E/S y red">
+        <span>E/S · Red</span>
+      </button>
+      <button class="impulsor" type="button">
+        <!-- usa memoria como placeholder de arquitectura si no tienes imagen -->
+        <img data-name="arquitectura" alt="Arquitecturas">
+        <span>Arquitecturas</span>
+      </button>
     </div>
   </section>
 
-  <!-- Implicaciones UX -->
-  <section class="container">
-    <h2 class="section-title">Implicaciones para IHM / UX</h2>
-    <div class="grid list-cards">
-      <div class="list-card">
-        <h4>Expectativas elevadas</h4>
-        <ul>
-          <li>Respuestas &lt; 200 ms para acciones comunes.</li>
-          <li>Estados de carga con progreso real o <em>skeletons</em>.</li>
-          <li>Personalización respetuosa (opt-in, control de datos).</li>
-        </ul>
-      </div>
-      <div class="list-card">
-        <h4>Transparencia</h4>
-        <ul>
-          <li>Explicar recomendaciones/IA con mensajes claros.</li>
-          <li>Deshacer/rehacer y trazabilidad de cambios.</li>
-          <li>Permitir “modo simple” y “modo avanzado”.</li>
-        </ul>
-      </div>
-      <div class="list-card">
-        <h4>Accesibilidad real</h4>
-        <ul>
-          <li>Contraste, foco visible y navegación por teclado.</li>
-          <li>Soporte de lector de pantalla y captions.</li>
-          <li>Alternativas de entrada: voz, táctil, hardware.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
     <p>© 2025 SoftPro • Powered by SKVJ</p>
   </footer>
 
-  <!-- JS: flip en click/Enter -->
+  <!-- Interacciones básicas -->
   <script>
-    // Flip para móviles/teclado
-    document.querySelectorAll('.card.flip').forEach(card => {
-      card.addEventListener('click', () => card.classList.toggle('is-flipped'));
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          card.classList.toggle('is-flipped');
-        }
+    // Fade-in de página
+    window.addEventListener('load', () => document.body.classList.add('page--in'));
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{threshold:.15});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+
+    // Flip cards con click o Enter/Espacio
+    document.querySelectorAll('.flip-card').forEach(card=>{
+      const toggle = ()=>card.classList.toggle('is-flipped');
+      card.addEventListener('click', toggle);
+      card.addEventListener('keydown', e=>{
+        if(e.key==='Enter' || e.key===' '){ e.preventDefault(); toggle(); }
       });
     });
+  </script>
+
+  <!-- ========= SUPER-RESOLVER: carga imágenes por nombre, probando rutas/extensiones ========= -->
+  <script>
+  (function () {
+    const dirs = [
+      './comportamiento/','comportamiento/',
+      './img/comportamiento/','img/comportamiento/',
+      '/Page-IHM/comportamiento/','/Page-IHM/img/comportamiento/'
+    ];
+    const exts = ['.jpg','.jpeg','.png','.webp'];
+
+    // nombre alterno por el typo comprension/conprension y por "arquitectura"
+    function altNames(name){
+      const list = [name];
+      if (/comprension/i.test(name)) list.push(name.replace(/comprension/i,'conprension'));
+      if (/conprension/i.test(name)) list.push(name.replace(/conprension/i,'comprension'));
+      if (/arquitectura/i.test(name)) list.push('memoria'); // fallback visible
+      return [...new Set(list)];
+    }
+
+    function tryLoad(url){
+      return new Promise((resolve,reject)=>{
+        const img=new Image();
+        img.onload=()=>resolve(url);
+        img.onerror=reject;
+        img.src=url+(url.includes('?')?'':`?v=${Date.now()}`); // anti-cache 404
+      });
+    }
+
+    async function resolveUrl(base){
+      for (const name of altNames(base)){
+        for (const d of dirs){
+          for (const e of exts){
+            const u = d + name + e;
+            try { return await tryLoad(u); } catch {}
+          }
+        }
+      }
+      throw new Error('sin coincidencias: '+base);
+    }
+
+    // Carga todas las imágenes que tienen data-name
+    const targets = document.querySelectorAll('img[data-name]');
+    targets.forEach(async (img)=>{
+      const base = img.getAttribute('data-name');
+      img.classList.add('pending');
+      try{
+        const good = await resolveUrl(base);
+        img.onload = ()=> img.classList.add('loaded');
+        img.src = good;
+      }catch(err){
+        console.warn('[IMG] no encontrada:', base);
+        img.classList.add('failed');
+      }
+    });
+
+    // Hero: si el CSS no alcanza/rompe, forzamos fondo
+    (async ()=>{
+      const hero = document.querySelector('.hero');
+      if(!hero) return;
+      const order = ['hero','memoria','cpu','io-red'];
+      for (const n of order){
+        try{
+          const good = await resolveUrl(n);
+          hero.style.background = `linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25)), url('${good}') center/cover no-repeat`;
+          hero.classList.add('bg-ready');
+          break;
+        }catch{}
+      }
+    })();
+  })();
   </script>
 </body>
 </html>
